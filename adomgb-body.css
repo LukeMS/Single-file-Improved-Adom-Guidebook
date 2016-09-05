@@ -1,0 +1,43 @@
+body {
+	font-family: Arial;
+}
+
+th {
+	color: #000000;
+	background-color: #00FFFF;
+	font-weight: bold;
+	text-align: left;
+}
+
+td {
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+td.map {
+	color: #FFFFFF;
+	background-color: #000000;
+	text-align: left;
+}
+
+td.map_info {
+	color: #FFFFFF;
+	background-color: #000000;
+	text-align: left;
+}
+
+caption {
+	text-align: left;
+	font-weight: bold;	
+}
+
+tt {
+	background-color: #F0F0F0; 
+	width: 0px;
+	white-space: nowrap; 
+	border-style: outset; 
+	border-width: 2px; 
+	margin: 0px; 
+	padding: 0px 3px 0px 3px; 
+	clear: none;
+}
