@@ -6,12 +6,14 @@ An adaption of http://adomgb.sweb.cz to a single-file version.
 It is also intended to be updated and differ from its original source in the future.
 
 This guidebook can be accessed here:
+
 https://lukems.github.io/Single-file-Improved-Adom-Guidebook
 
 The project's page can be accessed here:
+
 https://github.com/LukeMS/Single-file-Improved-Adom-Guidebook 
 
-Below are markdown examples that should be ignored and will be removed in a short time.
+Below are markdown examples (from https://stackedit.io/editor) that should be ignored and will be removed eventually.
 
 ----------
 
