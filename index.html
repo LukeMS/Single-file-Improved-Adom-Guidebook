@@ -10,7 +10,7 @@
     <style>
         body {
             font-family: Arial;
-            width: 100%;
+            width: 99%;
         }
         table {
             border-width: 1px;
@@ -28,7 +28,6 @@
         }
         table.quote {
             font-family: "Courier New";
-            width: 99%;
             table-layout: fixed;
             font-size: 75%;
             word-wrap:break-word;
@@ -517,6 +516,7 @@
           <dt><a href="#0.13.15">0.13.15</a> Graves</dt>
           <dt><a href="#0.13.16">0.13.16</a> Cavernous levels</dt>
           <dt><a href="#0.13.17">0.13.17</a> Webs</dt>
+          <dt><a href="#0.13.18">0.13.18</a> Statues</dt>
         </dl>
         <dt>0.14 <a href="#0.14"> Items</a></dt>
         <dl>
@@ -13903,8 +13903,8 @@ Your equipment turns to dust.
           kickers anyway.</p>
         <p> </p>
       </li>
-      <li><b>You have become extremely thin and nimble (1/2 weight, DV:
-          +6).</b>
+      <li><a name="thin_and_nimble"><b>You have become extremely thin and nimble (1/2 weight, DV:
+          +6).</b></a>
         <p> Nice corruption. Six points of DV, but increases hunger by 1
           per turn. This is one of the corruptions needed to enter the
           Quickling Tree.</p>
@@ -13916,8 +13916,8 @@ Your equipment turns to dust.
           1.5X.</p>
         <p> </p>
       </li>
-      <li><b>You have become very light (1/10 weight, St: -6, Dx: +4,
-          To: -6, Ap: -6, +20 speed).</b>
+      <li><a name="very_light"><b>You have become very light (1/10 weight, St: -6, Dx: +4,
+          To: -6, Ap: -6, +20 speed).</b></a>
         <p> Bad Strength and Toughness losses in exchange for speed and
           Dexterity. And yes, more Appearance loss. This is the other
           corruption needed to enter the Quickling Tree.</p>
@@ -18170,6 +18170,7 @@ Your equipment turns to dust.
         size and shape and the guaranteed presence of herbs (to the
         exclusion of other dungeon features) </li>
     </ul>
+
     <p> <a name="0.13.17"></a></p>
     <h4>0.13.17 Webs <tt>|</tt></h4>
     Webs are a semi-permanent dungeon feature that can trap either the
@@ -18224,6 +18225,2256 @@ Your equipment turns to dust.
       Flames and in the Water Dragon Cave.</p>
     <p> </p>
     <hr size="2"> Updated May 26th, 2015 <br>
+
+    <p> <a name="0.13.18"></a></p>
+    <h4>0.13.18 Statues<tt>|</tt></h4>
+    Statues are a special dungeon feature added in ADOM version 1.2.0. These statues, unlike normal <a href="#0.14.3">statues</a>, found in the <a href="#2.3">Bug Temple</a> or created by petrification, are not items but are immovable objects that have chance to be generated on a generic dungeon level. Each statue features a unique description, which will be displayed as the PC moves onto its location, and (most) statues have a unique effect which can be triggered by one of the following actions:<br>
+        <ul>
+        <li> Kicking the statue </li>
+        <li> Moving onto the statue's tile </li>
+        <li> Praying while standing on the statue's tile </li>
+        <li> Using magic (spell or wand) on the statue's tile </li>
+        </ul>
+    <p>Each statue was submitted by one of the <a href="http://ancardia.wikia.com/wiki/ADOM_Resurrection_campaign">ADOM Resurrection campaign</a> participants of <i>Adventurer</i> or higher pledge levels.<br>
+    This section is an adaptation of the information originally available at <a
+href="http://ancardia.wikia.com/wiki/Statue_%28dungeon_feature%29">ancardia.wikia.com</a>.<br></p>
+
+    <b>0.13.18.1 Statue mechanics</b>
+    <b>Appearance</b>
+    <p>If the PC moves on a statue's location, the message <i>You stumble upon a statue. &lt;statue description&gt;.</i> will be
+displayed; if the PC is literate, this will be followed by the message: <i>An inscription at the bottom reads: "&lt;statue inscription&gt;"</i>.<br></p>
+
+    <b>Special messages</b>
+    <p>If a statue is located on the current level, the following message will be displayed periodically: "You sense something of historical significance." </p>
+    <p>This message appears to be working as all other fixed dungeon features (forges, altars, etc.) messages.</p>
+
+    <b>0.13.18.2 List of all known statues</b>
+    <p>The following list contains all discovered statues. As noted above <i>"You stumble upon a statue."</i> and <i>"The inscription at the bottom reads:"</i> messages are generated automatically and are not included in actual description submitted by players; they are included in the table for narrative consistency.</p>
+    <br>
+<table>
+    <tbody>
+        <tr>
+            <th style="width: 300px;">Appearance</th>
+            <th>Inscription</th>
+            <th>Effect Trigger</th>
+            <th>Effect</th>
+            <th>Activation Message</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a small little ugly quasit, hewn from gabbro basalt. In its hands the statue holds some sort of shovel.</td>
+            <td>An inscription at the bottom reads: "a good shovel is a key to tomb robbery".</td>
+            <td>Kick.</td>
+            <td>Learn Mystic Shovel spell.</td>
+            <td>You learn the Mystic Shovel spell.<p>You learn the Divine Digger spell. (for divine casters)</p></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. The statue is unfinished, it's as though the sculptor ran out of time.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Step on the statue's square.</td>
+            <td>Reverses (some) unnatural aging</td>
+            <td>You Feel (sic) younger</td>
+            <td>Editor noticed all four years of unnatural aging removed from a PC. Also, having age status changed from 'grown-up' to 'young' did not affect stats</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be of a fair skinned Queen, with hair of rose gold and eyes of uncut blue-gray sapphires.</td>
+            <td>An inscription at the bottom reads: <p>"Eleanoreus Regina Reigns"</p></td>
+            <td>Step on the statue's square.</td>
+            <td>Stuns the PC</td>
+            <td>You feel sunburned!</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A drakeling ranger in a readied combat stance wielding a pair of gladii.</td>
+            <td>An inscription at the bottom reads: "Vae Victis"</td>
+            <td>Kick </td>
+            <td>Temporary Buffs speed by 25/26 and strength by 9.</td>
+            <td>The Statue crumbles to dust! You quicken. (You slow down somewhat. You feel your strength waning.)</td>
+            <td>"Vae Victis" is Latin for "Woe to the vanquished".</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a quickling.</td>
+            <td>An inscription at the bottom reads: "Trrrr digi dagi, muf muf!".</td>
+            <td>Kick </td>
+            <td>Permanently increases speed by 5.</td>
+            <td>You feel faster.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a large cube of gray stone, with one large rune carved into each face of the cube.</td>
+            <td>An inscription at the bottom reads: "Provoke not The Four, their gifts are Destiny and Doom".</td>
+            <td>Kick</td>
+            <td>Teleports PC away (other effects also possible?)</td>
+            <td>"Suddenly you stand somewhere else."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is covered in cracks and thick dirt but appears to be Nosaj the ancient Troll Healer.</td>
+            <td>An inscription at the bottom reads: "Be aR T E pOw r O C AoS"</td>
+            <td>Kick</td>
+            <td>Summons several Greater Chaos Servants, surrounding you, and drops a potion of cure corruption at your feet.</td>
+            <td>?</td>
+            <td>Note that Nosaj is Jason backwards</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a young Ancardian boy accompanied by what appears to be a stuffed tiger doll, riding together in a small red cart. The statue seems to be constructed of a multitude of nondescript items.</td>
+            <td>An inscription at the bottom reads: "THERE'S TREASURE EVERYWHERE!"</td>
+            <td>Kick</td>
+            <td>Potentially, transforms all item on ground (Probably only items on the statue square?) into heap of gold.</td>
+            <td><br></td>
+            <td>The statue appears to be a reference to <a href="http://en.wikipedia.org/wiki/Calvin_and_Hobbes">Calvin and Hobbes</a> comic series</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles your mother?!</td>
+            <td>An inscription at the bottom reads: "Be safe, pumpkin!"</td>
+            <td>Kick</td>
+            <td>Curses</td>
+            <td>"A voice in your head says "Is that really how you treat your mother?"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A bare-chested human with a full beard stands hunched over an empty anvil, his brow furrowed in concentration. His right hand carries a rune-carved (sic) hammer, raised as if to strike.</td>
+            <td>An inscription at the bottom reads: "Mylar Starstruck"</td>
+            <td>Step on </td>
+            <td>Trains smithing for not very skilled (&lt;50&nbsp;?), alternatively repairs equipped melee weapon. Breaks it if not skilled at all.</td>
+            <td>"Your eternium battle axe is suddenly repaired" or "You gain new insights into the art of smithing." or "Your club breaks." or "Nothing happens." (artifact melee weapon equipped)</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a naked humanoid with a huge head, wearing a necklace. You try to remove the necklace, but the head is too big.</td>
+            <td>An inscription at the bottom reads: "Z".</td>
+            <td>Use a wand</td>
+            <td>Generates an amulet. An <a href="#amulets">amulet of balance, amulet of health, amulet of free action and amulet of protection</a> have been received. The amulet generated may depend on DL?</td>
+            <td>"Suddenly an item is lying on the ground"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Lights play on the gemstones, the ivory horn glitters in multitude of colors cast by the reflections. The statue resembles a black cat forged of pure obsidian, riding a rainbow unicorn!
+            </td>
+            <td>An inscription at the bottom reads: "Nya Nya Nya Ruslan".
+            </td>
+            <td>Step on (once)
+            </td>
+            <td>Grants luck; may grant fate smiles if character already has luck.
+            </td>
+            <td>"You feel as if the light of Fate shines upon you favorably!"
+            </td>
+            <td>This statue appears to be a reference to <a href="http://en.wikipedia.org/wiki/Nyan_Cat">Nyan Cat</a> internet meme.
+            <p>The message appears to be the same regardless of what intrinsic is granted.
+            </p>
+            </td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a tall human wearing a heavy coat with a peaked cap on its head bearing eagle- and skull-shaped insignia unknown to you. You can almost feel his cold stare probing deep into you.</td>
+            <td>An inscription at the bottom reads "Max Otto von Stierlitz".</td>
+            <td>Step on (once-off)</td>
+            <td>Grants temporary cold immunity; seems to make PC "sneeze exactly once!" later?</td>
+            <td>"You feel cozy!"</td>
+            <td>This statue is a reference to <a href="http://en.wikipedia.org/wiki/Seventeen_Moments_of_Spring">Seventeen Moments of Spring</a>, a Soviet series</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a young human girl of seven or eight, carved from obsidian.</td>
+            <td>An inscription at the bottom reads: "I forgive nothing."</td>
+            <td>Kick</td>
+            <td>Possibly decreases <a href="#0.2.2">piety</a></td>
+            <td>No message</td>
+            <td>Possibly a reference to Nikki from <a href="http://en.wikipedia.org/wiki/Kill_Bill_Volume_1">Kill Bill Volume 1</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A marble Dark Elven archer stands here. He looks very powerful and very corrupted. You sense a faint soul here.</td>
+            <td>An inscription at the bottom reads: "Neji. — Defeated all his foes except for the chaos inside of him."</td>
+            <td>Pray</td>
+            <td>Asked to help a voice from elsewhere, saying "yes" will cause three corruptions or removes all(?) at least 5 was removed.</td>
+            <td>From the other worlds, you hear a whisper asking you "Hero - I am in agony here, will you help me?" (y/n) The marble eyes open to reveal glowing balls of envy and pain. You feel a soul rushing into your body battling for control! Resisting you tear yourself away from the statue. You feel corrupted/You feel cleansed.</td>
+            <td>PC was a level 10 human chaos knight and gained the unholy aura, black eyes, and horns corruptions.
+            <p>PC was a level 7 myst elf necromancer, have 5 corruptions,after praying on statue:Your blood returns to normal warmath!Your gills disappear and more 3 corruptions has removed</p>
+            <p>PC was a level 20 neutral high elven elementalist and have 3 corruptions. Your gills disappear. You gain a *lot* of weight. Your body becomes thicker and you assume your usual shape.</p></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts a standing warlock, holding a sharp, glittering sword with a hilt shaped like a miniature dragon.</td>
+            <td>An inscription at the bottom reads: "Adar, Guardian Battlemage."</td>
+            <td>Kick</td>
+            <td>Generates a <a href="#wmod" title="Weapon Modifiers">murderous</a> short sword <a href="#wmod" title="Weapon Modifiers">of slaughtering</a>.</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It looks like nothing you've ever seen. The form twists and shifts constantly, shimmering with dizzying energy.</td>
+            <td>An inscription at the bottom reads: "dEDiCaTeD tO tHe eSsEnCe Of ChAoS. mAy yOu AlWaYs ChAnGe!"</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It looks like a large, black stone block. It is probably made of obsidian.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Step on (once-off)</td>
+            <td>Trains random skill or granting a new one.</td>
+            <td>"You feel uplifted!"</td>
+            <td>This is a reference to the film <a href="https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_%28film%29">2001: A Space Odyssey</a> - the obsidian block is the monolith, uplifting an inferior species.
+            <p>Level 1 DfDu with Le:8 got Pick Pockets at 33 (2d4) without having visited the Thieves Guild. </p></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. The vaguely humanoid form is completely overgrown with various plantlife and crawling with insects.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Kick</td>
+            <td>May either generate several edible plants, or summons two insect monsters.</td>
+            <td>"Suddenly some items are lying on the ground." / <br>
+            <p>"You notice 2220137 appearing."</p></td>
+            <td>Observed plants include a seed and apple, and a seed and 2 alrunia antidotes; summoned monsters noticed have included giant bee warriors, giant centipedes and claw bugs. The message when monsters are summoned seems to be some kind of display error.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It's of a dark-haired woman wearing a toga and holding out a golden apple</td>
+            <td>An inscription at the bottom reads: "Kallisti"</td>
+            <td>Step on (once-off)</td>
+            <td>Seems to be equivalent to drinking from a Pool.</td>
+            <td>You suddenly picture yourself biting into a tasty apple! It fills your mouth with a refreshing liquid! &lt;You age!&gt; &lt;What do you wish for?&gt; &lt;You feel totally awake.&gt;</td>
+            <td>This statue appears to be a reference to <a href="http://en.wikipedia.org/wiki/Apple_of_Discord">Golden Apple of Discord</a>; the woman thus is Eris, the goddess of chaos and strife</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a bookshelf, crafted from stone. Each book inside is crafted from a different type of rock. You don't understand the titles.</td>
+            <td>An inscription at the bottom reads: "Do you know where your towel is?"</td>
+            <td>Step on (once-off)</td>
+            <td>Generates a blanket</td>
+            <td><br></td>
+            <td>This is a reference to <a href="http://en.wikipedia.org/wiki/Hitchhiker%27s_Guide_to_the_Galaxy">Hitchhiker's Guide to the Galaxy</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. The life-sized female human monk in a fighting position is carved from a single block of ivory, her arms spread in a defensive figure.
+            <p>The air around the statue tingles strongly and when you avoid focusing on the sculpture with your eyes, you can't stop thinking as if the monk is swaying ever so slightly, her robes flattering in the draft. But there is no way that could be the case, the statue is still and unmoving upon close inspection and the ivory is rock solid on touch..."</p></td>
+            <td>An inscription at the bottom reads: "Maen, the Kata Training Master of Dela"</td>
+            <td>Kick (repeatable)</td>
+            <td>Unknown</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a slightly eccentric man with long blonde flowing hair, arm held upward with a curious object in his hand.</td>
+            <td>An inscription at the bottom reads: "Gardening is the game of life!"</td>
+            <td>Kick</td>
+            <td>Causes herbs to appear in a 'Glider' shape (might be just one bush if there is not enough room near the statue)</td>
+            <td>The statue crumbles to dust! Suddenly some herbs appear!</td>
+            <td>Refers to the fact that herbs are growing by the rules of Conway's <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It seems to look like a penguin... in a strange way.</td>
+            <td>An inscription at the bottom reads: "CP-Violation will be prosecuted by CERN."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>This is likely a reference to <a href="http://en.wikipedia.org/wiki/Penguin_diagram">penguin diagrams</a>, a class of diagrams in quantum field theory.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It looks like an east merchant, made from gold.</td>
+            <td>An inscription at the bottom reads: "ALL YOUR MONEY ARE BELONG TO ME."</td>
+            <td>Step on (once - but see notes)</td>
+            <td>2% (rounded up) of the PC's gold goes disappears.</td>
+            <td>You feel slightly less encumbered.</td>
+            <td>This statue appears to be a reference to <a href="http://en.wikipedia.org/wiki/All_your_base_are_belong_to_us">AYBABTU</a> video game meme. The statue appears to activate only once, but it will not activate if the PC has no gold pieces.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a man with a benign smile and hair like a halo.</td>
+            <td>An inscription at the bottom reads: "Long live the Vampire Slayer!"</td>
+            <td>Pray</td>
+            <td>Restores all PP.</td>
+            <td>You feel full of power.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles an old magician.</td>
+            <td>An inscription at the bottom reads: "Hockaz Pockhus 187-299"</td>
+            <td>Casting spell?</td>
+            <td>Random (undead?) monster appears.</td>
+            <td><br></td>
+            <td>Upon casting a spell, a wraith and a ghul have been generated.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles an aged wizard in a dynamic pose, brandishing an ornate wand.</td>
+            <td>An inscription at the bottom reads: "In honor of the grand wandmaker ... (the rest of the inscription is worn away)"</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a dragon, but on each scale, an emblazoned rune shines.</td>
+            <td>An inscription at the bottom reads: "Callest the Thunder, and He shall Reapeth the Whirlwind."</td>
+            <td>Kick</td>
+            <td>Unknown</td>
+            <td><br></td>
+            <td>Note that this is grammatically incorrect; it should read either <i>shall reap</i> or <i>reapeth</i>. Also, <i>callest</i> is the indicative mood where imperative seems to be required</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts two enormous dogs, pitch black and wolf-like appearance, standing guard over a fallen soldier. Their eyes seem to watch your every move...</td>
+            <td>An inscription at the bottom reads: "Here stands Pajazzo and Ulysses, never resting, ever watching."</td>
+            <td>Kick</td>
+            <td>Increases Toughness by 1 point</td>
+            <td><br></td>
+            <td>Note that potential doesn't increase.
+            <p>Increase Pe +1 for GEWz To 10</p></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is of a kneeling Elven man, carved from simple granite.</td>
+            <td>An inscription at the bottom reads: "The Scions walk with you!"</td>
+            <td>Step on (once-off)</td>
+            <td>Same effect as a (blessed) <a href="#potions">potion of boost willpower</a>.</td>
+            <td>"You feel determined!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It bears a striking resemblance to Richard, the warp duck of lore.</td>
+            <td>An inscription at the bottom reads: "Qua... ...ck."</td>
+            <td>Use a wand</td>
+            <td>Teleports PC</td>
+            <td>You teleport.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It looks like an evil clown juggling human skulls.</td>
+            <td>An inscription at the bottom reads: "Gravity sucks"</td>
+            <td>Step on</td>
+            <td>Turns all monsters on level hostile, including companions</td>
+            <td>"The clown laughs at you, the laughter echoes through the dungeon."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Crumbling and fallen, only the feet remain. You notice that each foot has only four toes.</td>
+            <td>An inscription at the bottom reads: "Aut viam inveniam aut faciam"</td>
+            <td>Pray on</td>
+            <td>Increase Willpower by one</td>
+            <td>"You suddenly know that you will either find a way to achieve your goals or that you will make one."</td>
+            <td>The Latin phrase means "I shall either find a way or make one" and is attributed to <a href="http://en.wikipedia.org/wiki/Hannibal">Hannibal</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is carved to depict a small woman, on her knees with her face drawn in a rictus of terror.</td>
+            <td>An inscription at the bottom reads: "Fear is the only weakness"</td>
+            <td>Kick</td>
+            <td>Summons random(?) undead(?) hostile monster</td>
+            <td><br></td>
+            <td><b>Possible monsters:</b> Wraith</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It's a perfect sphere the size of a man's head, glowing with a faint green light.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Unknown</td>
+            <td>Uncurses equiped items</td>
+            <td><br></td>
+            <td>Kicked as a lvl7 L Dwarf Priest, Unicorn Sign, got "A huge fireball explodes!", took about 25hp of damage and "The statue crumbles to dust". No detectable event other than the explosion/disappearance of the statue.
+            <p>---</p>
+            <p>Kicked as lvl10 Drakish male Monk, Candle Sign, got no effect.</p></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a huge heap of old armor, rusted weapons, wands and small bottles. For a moment, you think you see something moving underneath...</td>
+            <td>An inscription at the bottom reads: "Aldrin the Always Prepared"</td>
+            <td>Kick</td>
+            <td>Drops a girdle of carrying</td>
+            <td>"An old belt falls from the statue. It seems to still be useable..."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a sandstone figure of a small dog. Its ears taper to points, and carved muscles bulge underneath its skin.</td>
+            <td>An inscription at the bottom reads: "To the unknown jackal."</td>
+            <td>Pray</td>
+            <td>Causes a tame jackal to appear.</td>
+            <td>Suddenly a jackal appears.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It looks like a mad wizard ripping pages out of a spellbook.</td>
+            <td>An inscription at the bottom reads: "Knowledge is a finite resource: the more you learn, the more you forget"</td>
+            <td>Kick</td>
+            <td>PC un-learns a skill at random, then the PC learns a new random skill (at skill level 1d100).</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a large crowned bearded man surrounded by carved squirrel companions.</td>
+            <td>An inscription at the bottom reads: "You shall nut pass!"</td>
+            <td>Kick</td>
+            <td>Randomly spawns additional (hostile?) monsters on the level.
+            <p>Crashes the game in pre23, fixed in current versions.</p></td>
+            <td>"A booming voice bellows: "Ye have incurred wrath of the Squirrel King!"
+            <p>The stone squirrel companions spring to life and surround you!"</p></td>
+            <td>Pun on <a href="http://en.wikipedia.org/wiki/Lord_of_the_Rings">Tolkien's Gandalf</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is of an Avatar of Balance, a wide cloak billowing around him. The avatar's left arm is hidden by the cloak, but his right arm extends outward and holds a sword as tall as the avatar, the tip just touching the ground. Hanging from the cross-guard is an ornate pair of scales, perfectly balanced on fine chains.</td>
+            <td>An inscription at the bottom reads: "To the ancient judges; in whose dominion Balance reigned supreme."</td>
+            <td>Pray</td>
+            <td>Unknown; prayer is also heard by PC's deity</td>
+            <td>"Your prayers are heard."</td>
+            <td>Editor was playing as a neutral PC</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It seems quite brittle and eroded. You can't decipher what it once may have resembled.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Step on (once-off)</td>
+            <td>PC becomes blinded by dust eroding from the statue. The effect is similar to the glob of mud rooms, since it can only be cured by using the wipe face command.</td>
+            <td><i>When activated:</i> "You are blinded by the dust eroding from the statue." <br>
+            <p><i>When remedied:</i> "You clean your face from all the dust."</p></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is carved from a single, solid piece of granite. It seems to represent a once great lord of some considerable girth wrapped in grand robes. He is resting upon a throne before which stands a pedestal holding a great tome with archaic runes.</td>
+            <td>An inscription at the bottom reads: "You gain some, you lose some. You can't have it all."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a humanoid standing square and emotionless. It appears to be missing a chunk of stone on his head.</td>
+            <td>An inscription at the bottom reads: "75% Off"</td>
+            <td>Kick</td>
+            <td>Statue breaks and summons Doop, a tame stone golem.</td>
+            <td>"The statue hums and vibrates for a moment, and then appears to come to life. It slowly turns toward you and mutters: "Zoop bing bada doop." "</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a tall, winged figure clad in a breastplate and gripping a broadsword. You feel faint waves of blessed power emanating from the sword.</td>
+            <td>An inscription at the bottom reads: "Mieaevar"</td>
+            <td>Step on (once-off)</td>
+            <td>Restores some HP and PP. (For lawful only&nbsp;?)</td>
+            <td>"You feel righteous... and right!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It seems to be a male figure with the head of a hippopotamus, made of granite.</td>
+            <td>An inscription at the bottom reads: "GueuetiteueuG"</td>
+            <td>Step on (repeatable)</td>
+            <td>Confuses the PC if not already confused, removes confusion if already confused</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts an old man wearing sideburns. The man is holding a scroll with a 17-pointed star inscribed on it.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Casting spell</td>
+            <td>Temporary +20 Le</td>
+            <td><br></td>
+            <td>This is likely a reference to <a href="http://en.wikipedia.org/wiki/Gauss">Carl Friedrich Gauss</a>, a German mathematician.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It looks like a very great computer from the beginning of the 1980ties, it is brown and very similar to a bread bin.</td>
+            <td>An inscription at the bottom reads: "Commodore C64, Made In W. Germany"</td>
+            <td>Pray on</td>
+            <td>Restores HP; prayer is also heard by deity</td>
+            <td>"You feel healed. Your prayer remains unheard."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a wooden statue of a giant rat.</td>
+            <td>An inscription at the bottom reads: "Squeek!"</td>
+            <td>Kick</td>
+            <td>Summons hostile giant rat (s)</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A mighty hero stares down at you from the golden pedestal. You are awed by the strong and yet graceful curves. This is truly a godly figure. Oh wait... you recognize yourself!</td>
+            <td>An inscription at the bottom reads: "Self-esteem is golden, but valor is beyond price"</td>
+            <td>Kick</td>
+            <td>Destroys the statue, reduces HP to 1 and generates 100 gold in the statue's place; deafen the PC for 100 turns; clears cursed and doomed intrinsics; grants +1 Willpower and +1 Appearance</td>
+            <td>"The statue crumbles to dust! Suddenly you hear a thousand bells ringing in your head. You fall onto the ground writhing in pain. And yet you feel good about what you just did. Suddenly an item is lying on the ground."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It represents a monster of vaguely anthropoid outline, but with an octopus-like head whose face is a mass of feelers, a scaly, rubbery-looking body, prodigious claws on hind and fore feet, and long, narrow wings behind.</td>
+            <td>An inscription at the bottom reads: "Ia! Q'thulu ftaghn!"</td>
+            <td>Step on</td>
+            <td>Grants Lucky intrinsic to chaotic PC, temporarily confuses others</td>
+            <td><br></td>
+            <td>Reference to Cthulhu of <a href="http://en.wikipedia.org/wiki/Lovecraft_Mythos">Lovecraft Mythos</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It's a sphere.</td>
+            <td>An inscription at the bottom reads: "That's no moon."</td>
+            <td>Step on</td>
+            <td>Generate penetrating drakish scurgar of targeting</td>
+            <td><br></td>
+            <td>Possibly a <a href="http://www.youtube.com/watch?v=EVekNsgUqn4">reference</a> to Obi-Wan's line from the <a href="http://en.wikipedia.org/wiki/Star_Wars_Episode_IV:_A_New_Hope">first Star Wars film</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. On closer inspection it looks like a barrel-chested man. His eyes are flickering and shimmering in thousands of colours. He is smiling at you with seemingly endless joy, careless joy, knowing that his lucky day could be the day of your doom.</td>
+            <td>An inscription at the bottom reads: "Does fate smile upon you?"</td>
+            <td>Step on (once-off)</td>
+            <td>Decreases luck (like karmic creatures). Or increases it (depending on Mana (40+)&nbsp;?)</td>
+            <td>"You feel less lucky"/"You feel more lucky"</td>
+            <td>A PC once lost the Fate Smiles intrinsic by it, while another PC with no positive luck-based intrinsics received the cursed intrinsic from it</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is made of some unnatural watery substance which streams without losing its form. The statue seems to be vaguely familiar to you.
+            <p>Suddenly you recognize your own eyes, albeit they seem different... older... and very blank. You stare at the eyes but they never blink. You feel humiliated, as if your shadow stops following you. Except that you seem to be the shadow here.</p></td>
+            <td>An inscription at the bottom reads: "Who are you?"</td>
+            <td>Kick</td>
+            <td>Increases Willpower by 2 and Charisma by 5; corrupts; destroys statue</td>
+            <td>"You hesitate, and then suddenly kick the statue with full force. The statue shatters. You are annoyed by your own weaknesses, but immediately feel proud and confident again for overcoming them."</td>
+            <td>At least three PCs have been observed to transform into a chaos being after gaining 18/19 corruptions at once (if PC is Chaotic or Neutral?). Other PCs have been observed to pick up one corruption that was not announced by the game after kicking the statue.</td>
+        </tr>
+        <tr>
+            <td>It is a warrior carved in white stone, sword in hand, another sword strapped to his back. You notice a finely crafted wolf's head talisman hanging on his neck.</td>
+            <td>An inscription at the bottom reads: "To G. of R., a true hero and friend of dwarvenkind."</td>
+            <td>Step on (once-off)</td>
+            <td>Generates a <a href="#amulets">necklace of the eye</a></td>
+            <td>Suddenly an item is laying on the ground.</td>
+            <td>This is a reference to Geralt of Rivia, the main protagonist of the <a href="http://en.wikipedia.org/wiki/The_Witcher">Witcher</a> series.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a human, whose appearance seems to be strangely familiar.</td>
+            <td>An inscription at the bottom reads: "Sometimes, you gotta run before you can walk".</td>
+            <td>Step on</td>
+            <td>Increases Speed by 5</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles an ancient black dragon, hewn from pure black diamond.</td>
+            <td>An inscription at the bottom reads: "nive idvi ciiv"</td>
+            <td>Pray</td>
+            <td>With ~50% chance generates a sword of sharpness</td>
+            <td>Suddenly an item is laying on the ground / You have a feeling of loss</td>
+            <td>The inscription is an anagram of the phrase "<a href="http://en.wikipedia.org/wiki/Veni_vidi_vici">veni vidi vici</a>"</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is covered with permafrost and is too cold to touch.</td>
+            <td>An inscription at the bottom reads: "I long for eternal frost and black winters."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Upon it stands a man, tall with close cropped hair. He wears strange bulky armor only covering the torso, with a rounded helmet. In his hands is a gently curved sword, held in a ready, yet relaxed position. He carries a pack that looks extremely heavy.</td>
+            <td>An inscription at the bottom reads: "Dijheans, he fought in a war that did not remember him or his comrades."</td>
+            <td>Step on (once-off)</td>
+            <td> +10 Capacity</td>
+            <td>"You notice your burden lightens slightly."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts the face of a man of about forty-five, with a heavy black moustache and ruggedly handsome features.</td>
+            <td>An inscription at the bottom reads: "Ignorance is strength."</td>
+            <td>Kick</td>
+            <td> +1 Willpower</td>
+            <td>"You suddenly know that you will either find a way to achieve your goals or that you will make one."</td>
+            <td>Appears to be a reference to <a href="http://en.wikipedia.org/wiki/George_Orwell">George Orwell's</a> novel <a href="http://en.wikipedia.org/wiki/Nineteen_Eighty-Four">1984</a>.
+        <br>
+            <p>Crashes the game in pre23 (win7 64bit)</p></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Delicately carved from granite and smoothly polished, a young, lithe woman lies prostrate on an ornate settee. She is clothed in thin, revealing attire, with one hand resting wearily against her forehead, and the other reaching languidly outwards. Her posture suggests great personal despair.</td>
+            <td>An inscription at the bottom reads: "...and 'lo that wench, upon this bench, her fate was sealed in stone."</td>
+            <td>Step on</td>
+            <td>Deafens the PC.</td>
+            <td>"Your ears are assaulted by a high-pitched screeching... then you hear nothing at all."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles 10 shining monkeys, hewn from pure Diamond.</td>
+            <td>An inscription at the bottom reads: "SSAGAZY!"</td>
+            <td>Step on (once-off)</td>
+            <td>Same effect as a blessed <a href="#scrolls">scroll of identify</a></td>
+            <td>"You feel enlightened!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a strong farmer with a dog by his side wielding an ancient trident.</td>
+            <td>An inscription at the bottom reads: "Hard work and a strong back can overcome any obstacle."</td>
+            <td>Kick</td>
+            <td>Generates a trident and two <a href="#potions">potions of strength</a></td>
+            <td>Suddenly some items are lying on the ground</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a stone tree, covered with specks of dried blood.</td>
+            <td>An inscription at the bottom reads: "Ouch!"</td>
+            <td>Kick</td>
+            <td>Causes heavy bleeding</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a fearful knight. Pure darkness radiates from its obsidian eyeballs.</td>
+            <td>An inscription at the bottom reads: "Only the penitent man shall pass."</td>
+            <td>Pray on</td>
+            <td>Corrupts (~1 effect)</td>
+            <td><br></td>
+            <td>May be a reference to <a href="http://www.imdb.com/title/tt0097576/">Indiana Jones and the Last Crusade</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is shaped as the most gorgeous woman you ever saw, with stunning eyes and shimmering hair. You feel a surge to deliver her.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Pray on</td>
+            <td>Summons a doppelganger; prayer seems to also be heard by PC's deity</td>
+            <td>"As &lt;PC's deity&gt; relieves the prisoner from its petrified state, she suddenly transforms into a very known person. Your prayers remain unheard."</td>
+            <td>Male or female characters</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It shows a leaping fish.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Kick</td>
+            <td>Unknown</td>
+            <td>No message</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a dwarf, brandishing a battleaxe with one hand, and with the other drinking deeply from a frothing tankard.</td>
+            <td>An inscription at the bottom reads: "Bundin the Besotted - His virtue was solid, and his courage, liquid."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. The statue is cast in bronze and resembles a Barbarian accompanied by a snarling dog.</td>
+            <td>An inscription at the bottom reads: "Pray that your dog never bites you!"</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a goblin berserker, hewn from a 100 carat brilliant blue sapphire</td>
+            <td>An inscription at the bottom reads: "Chaos will prevail"</td>
+            <td>Kick</td>
+            <td>Grants intrinsic invisibility</a> to the PC</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It looks like a giant frog made of pure emerald.</td>
+            <td>An inscription at the bottom reads: "Berep!"</td>
+            <td>Step on (once-off)</td>
+            <td>Grants Lucky intrinsic</td>
+            <td>"You suddenly hear a croaked "Berep". You feel the urge to smile!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is made from shiny round rocks, vaguely resembling a hurtling (sic) figure.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Kick</td>
+            <td>Drops a pile of rocks</td>
+            <td>"Suddenly an item is lying on the ground. The statue crumbles to dust!"</td>
+            <td>Dropped 5 (+2, 1d4) rocks
+            <p>Dropped 6 (+0, 1d4) rocks in another instance - seems like the rocks are random</p></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a standing disc filled with a mix of blue and purple stained glasses in a complicated kaleidoscopic pattern on both sides. It is supported by a grey stone carving that resembles a large cloud.</td>
+            <td>An inscription at the bottom reads: "Winds of Omen"</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a tall statue of a short figure; a hurthling with a determined grin and a full pack. Graffiti scratched into the stone reads "Better a small fire that warms than a great fire that burns".</td>
+            <td>An inscription at the bottom reads: "The Lost Volcano Expedition"</td>
+            <td>Step on (once-off)</td>
+            <td>Grants resistance to fire, stunning and confusion</td>
+            <td>"You feel ready for the heat!"</td>
+            <td>Once of the statues in the <a href="#2.3">Bug Temple</a> is dedicated to a hurthling, called Wor Janoth, who was the "Explorer of the Lost Volcano".</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles the head of a horse. It expression is an ambiguous mix of panic and frenzied elation.</td>
+            <td>An inscription at the bottom reads: "Prepare for Final Fulfillment"</td>
+            <td>Kick</td>
+            <td>Permanently increases speed 5 points OR drops a wand (possibilities include door creation, digging, acid, fire, lightning at least) OR does nothing.</td>
+            <td>"You feel faster." OR "Suddenly an item is lying on the ground." OR no message.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is shaped like a perfect hemisphere, made from some unknown metal. Though its surface is tarnished, you can still see your distorted reflection.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Kick</td>
+            <td>Generates a fireball centered on the statue.</td>
+            <td>"A huge fireball explodes! You are engulfed by the roaring flames! The statue crumbles to dust!" (ADOM release 52). "The statue crumbles to dust! You feel a strong shock wave." (ADOM 1.2.0 Prerelease 23?)</td>
+            <td>Generates an "Illegal ball damage type(3)." error in ADOM 1.2.0 Prerelease 23.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is covered in moss and has lost some of its original definition to the ages it was sculpted. It resembles a man, with the legs of a beast. He holds something in his hands, a musical instrument or tablet bearing writing in some forgotten script?</td>
+            <td>An inscription at the bottom reads: "The Great God Pan"</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>Direct reference to the god <a href="http://en.wikipedia.org/wiki/Pan_%28god%29">Pan</a> in Greek mythology.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles an old wizard, hewn from fine, white marble.</td>
+            <td>An inscription at the bottom reads: "DO NOT DISTURB!"</td>
+            <td>Kick</td>
+            <td>Stuns for a few turns, teleports PC and drops alignment.</td>
+            <td>No message</td>
+            <td>N- high elven druid got to C after kicking the statue.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts an ancient dragon slumped, dead on the floor. A goblin stands atop it, victorious.</td>
+            <td>An inscription at the bottom reads: "For the cursed will be blessed and the earth shall be theirs."</td>
+            <td>Kick</td>
+            <td><a href="#wands">Wand of digging appears on the floor; also generates <a href="#wands">wand of earthquakes</a> for cursed PC and <a href="#wands">wand of destruction</a> for doomed PC</td>
+            <td>Suddenly an item is lying on the ground.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. The statue looks surprisingly much like you, only smaller.</td>
+            <td>An inscription at the bottom reads: "Ye who wants to know it all should know thyself first."</td>
+            <td>Kick</td>
+            <td>Same effect as <a href="#potion_of_insight">potion of insight</a> / Revelation spell; or else same effect as <a href="potion_of_confusion">potion of confusion</a>.</td>
+            <td>"You suddenly feel very self-knowledgeable." or "You are confused."</td>
+            <td>Seems to depend on learning (literate/Le:18 works, illiterate/Le:8 doesn't, illiterate/Le:15 also works)</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Unknown and partly hidden in the shadows, the statue portrays a tall and vigorous human of unclear age.
+            <p>He boasts a long red beard and some sort of medallion with startling inscription. With one hand he is clutching several books and scrolls to his belly; the other hand, invitingly open, is well-polished, as if been touched numerous times. He looks like a priest of a forgotten deity... or a scholar of a school yet to be founded."...</p></td>
+            <td>An inscription at the bottom reads: "Societas Eruditorum"</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>Could be a reference to <a href="http://en.wikipedia.org/wiki/Societas_eruditorum_incognitorum_in_terris_Austriacis">"Societas eruditorum incognitorum in terris Austriacis"</a>( The Society of Anonymous Scholars in the Austrian Lands).</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A layer of ice covers it completely and an aura of cold seems to be emanating from within. Just below the surface you can make out a human face screaming in agony.</td>
+            <td>An inscription at the bottom reads: "Where are the frost giants I've begged for protection?"</td>
+            <td>Step on (once-off)</td>
+            <td>Decreases speed by 5</td>
+            <td>"The air in your lungs seems to be cooling to an almost unbearable level. Ice crystals are starting to form on your skin and you gear. Perhaps you should leave before you freeze into a statue yourself."</td>
+            <td>May refer to the song Too Late: Frozen by <a href="http://en.wikipedia.org/wiki/Type_O_Negative">Type O Negative</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Of Great Sisters</td>
+            <td>An inscription at the bottom reads: "AN GI NA"</td>
+            <td>Kick</td>
+            <td>Increases Charisma by 1 and statue disintigrates.</td>
+            <td>"You feel friendly"</td>
+            <td>It is a reference to <a href="http://en.wikipedia.org/wiki/The_Great_Giana_Sisters">The Great Giana Sisters</a> game. "AN GI NA" is an anagram of "Gianna" (misspelled heroine's name)</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Delicately carved from dark green granite, this huge brute of a man stands leering over you.
+            <p>He is wearing little more than a kilt and bracers, but holds a massive stylised two-handed sword in his hands, ready for battle. Seven other large blades stand in a circle around him, each worked from a different stone but just as sharp as the one he carries....</p></td>
+            <td>An inscription at the bottom reads: "Rene, Son of Rel. Master of Blades, Bringer of Storms."</td>
+            <td>Kick</td>
+            <td>Unknown</td>
+            <td>No message</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a stunning sculpture of a swarm of blue scarabs, accented with gold and precious gems.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Step on</td>
+            <td>Increases Dexterity by 1.</td>
+            <td>"You feel very nimble"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. On the weathered stone you discern the features of a tall elf, his right arm holding a lute, his left distorted in a mass of tentacles, a sly grin on his scarred face.</td>
+            <td>An inscription at the bottom reads: "All hail Tarindil, master of music, embracer of ChAoS!"</td>
+            <td>Step on</td>
+            <td>Charisma+1, Learning+1.
+            <p>Corruption or corruption removal. See notes.</p></td>
+            <td>"A dark and enchanting tune hangs in the air for a moment, and you feel your mind wander to forbidden places."</td>
+            <td>Effect is likely bugged in r49: PC with no corruption got 1 corruption level. PC with about 0.5-1 corruptions got some corruption points removed. PCs with 5 and 17 corruptions were cured from all corruptions (but left with some corruption points).</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. You find a gargoyle emtombed <i>[sic]</i> in unadulterated terror. The statue smells of the sea. The statue has a marble <a href="#ring_of_the_fish">ring of the fish</a> in one of its hands.</td>
+            <td>An inscription at the bottom reads: "If found, ship to the Gorgades Islands."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><a href="http://en.wikipedia.org/wiki/Gorgon">Gorgons</a> from Greek mythology were thought to live on the Gorgades Islands (which may refer to modern <a href="http://en.wikipedia.org/wiki/Cape_Verde">Cape Verde</a>).</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It portrays a man bound to the earth with heavy chains.</td>
+            <td>An inscription at the bottom reads: "A name is an omen."</td>
+            <td>Kick</td>
+            <td>Earthquake</td>
+            <td>"The whole level is suddenly hit by a violent earthquake!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a statue of a man with lifted arms, standing
+            <p>on top of a large gate-like arch of unhewn white stones.</p></td>
+            <td>An inscription at the bottom reads: "Off we go!"</td>
+            <td>Step on (once-off)</td>
+            <td>Several (2 and 4 observed) swordsmen appear next to the PC.</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It represents a young elven woman holding a fairy dragon in her hands, exquisitely crafted from mithril.</td>
+            <td>An inscription at the bottom reads: "In Memory of Thecla"</td>
+            <td>Step on (once-off)</td>
+            <td>Summons a tame fairy dragon</td>
+            <td>"A tamed fairy dragon appears."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. The statue seems to want to talk to you, its half-grinned face seems to follow you around the room... eventually the statue begins to explain various countries' corporate and civil laws. You are bored enough to fall asleep!</td>
+            <td>An inscription at the bottom reads: "this is a lawful statue"</td>
+            <td>Kick</td>
+            <td>You feel corrupted! Enough to receive one corruption.</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It pictures a long man in a robe whose gaze is at the distance and who is holding a thick book in his hand. The man has the symbols of the elements engraved in the back of his robe.</td>
+            <td>An inscription at the bottom reads: "Jussi Viinikainen, pioneer in elemental research"</td>
+            <td>Step on (once-off)</td>
+            <td>Player is prompted to read a set of runes on the foot of the statue (y/n); various effects are available depending on PC's Learning score (temporary confusion, receiving intrinsic random elemental resistance, resistance to <i>all</i> elements, or failing to read the runes to no effect at all)</td>
+            <td>When gaining resistance to all elements: "You understand the runes. You now fully comprehend the principles of the elements."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a beautiful dragon, carved from the purest crystal. The statue glistens in the light like a myriad fires.</td>
+            <td>An inscription at the bottom reads: "Humble yourself before the lord of the mountain lake!"</td>
+            <td>Pray on</td>
+            <td>Grants +2 Learning</td>
+            <td><br></td>
+            <td>Reference to Guy Gavriel Kay's Fionavar Tapestry series.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a great hulk of black obsidian, depicting an ancient warrior. His armor is dented and battered, his sword broken, and his shield split. He is covered in scars from numerous battles.
+            <p>One eye is missing, and one arm is horribly disfigured. He is a man with one foot in the grave. On his back rides a shadowy beast; a horrible fanged grue."...</p></td>
+            <td>An inscription at the bottom reads: "Though ye be doomed, if ye have breath, fight on."</td>
+            <td>Pray on</td>
+            <td>If not already doomed: dooms the PC and summons an air grue, a water grue, and fire grue and a stone grue around him/her. The statue also gets destroyed.
+            <p>If doomed: grants paralysis resistance intrinsic and destroys statue.</p></td>
+            <td>If doomed: "The statue crumbles to dust! You feel incredible surge of strength pass through you."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a bard with a long-necked lute with four thick strings.</td>
+            <td>An inscription at the bottom reads: "Bow your head to lowland vibe"</td>
+            <td>Pray on</td>
+            <td>Generates lute {Lakland} (was uncursed/doomed and L+ crowned)</td>
+            <td><br></td>
+            <td>The 'lute' described is more than likely a <a href="http://en.wikipedia.org/wiki/Bass_guitar">bass guitar</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a grinning man with a pamphlet under his arm, counting on his fingers. It is made from pyrite. You suspect he cheated.</td>
+            <td>An inscription at the bottom reads: "When speed must needs exceed"</td>
+            <td>Kick</td>
+            <td>Unknown</td>
+            <td>None</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It's a hollow square cube that you can see into from the top. The statue is half filled with middy <i>[sic?]</i>, lumpy water.</td>
+            <td>An inscription at the bottom reads: "Waste not, want not."</td>
+            <td>Kick</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a bipedal frog with one foot much larger than the other in a martial arts pose.</td>
+            <td>An inscription at the bottom reads: "In memory of Ribby - the foot of justice and beloved king."</td>
+            <td>Kick (once)</td>
+            <td>You'll slide one step from statute. No health damage.</td>
+            <td>The statue rotates on its base and kicks you back! You tumble along the floor after being hit by some strong force!</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a foot.</td>
+            <td>An inscription at the bottom reads: "Artist unknown"</td>
+            <td>Kick (repeatable)</td>
+            <td>None other than a message?</td>
+            <td>"A booming voice shouts: "Ow!" ".</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. You don't notice anything unusual. Or do you?</td>
+            <td>An inscription at the bottom reads: "Please return to the finder.".</td>
+            <td>Step on (repeatable)</td>
+            <td>Unknown</td>
+            <td>You feel happy and content.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a decrepit old hag, dressed in tattered rags.</td>
+            <td>&lt;no inscription&gt;</td>
+            <td>Stepping on the statue.</td>
+            <td>May make the PC Sick.</td>
+            <td>You feel decrepit.</td>
+            <td>(Specifics not known - done to a Dark Elf Ranger, further testing needed.) GnWiz do not suffered</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A caryatid stands here, holding the ceiling above you.</td>
+            <td>An inscription at the bottom reads: "Do not kick."</td>
+            <td>Kicking statue</td>
+            <td>Earthquake on whole level.</td>
+            <td>The whole level shakes violently.</td>
+            <td>Seems to produce much more destruction that just one casting of Earthquake spell.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a cenotaph for an adventurer who lost her way in the dark.</td>
+            <td>An inscription at the bottom reads: "Tipi Marjukka Ainas, YASD"</td>
+            <td>Kick</td>
+            <td>Generates a wand, scroll, or amulet of light</td>
+            <td>The statue crumbles to dust! Suddenly an item is lying on the ground</td>
+            <td>YASD — a commonly used acronym in the ADOM community — means "Yet Another Stupid Death"</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a very lifelike stone warrior standing a shield raised on defense and a sword readied to strike.</td>
+            <td>An inscription at the bottom reads: "Sir Archenon the gremlin slayer. Arch Gremlin tricked him to petrify himself."</td>
+            <td>Kick</td>
+            <td>Generates a long sword with a <a href="#wmod">modifier</a>.</td>
+            <td><br></td>
+            <td>Modifiers: fickle, white, wicked, mayhem, defense, penetration, fumbling.</p></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to have been crudely hewn out of some sort of indistinguishable material. It doesn't seem to resemble anything in particular. The only thing that is definite about this statue is the unmistakable feeling of dread it inspires in you. There appears to be an inscription at the bottom. Are those... claw marks?</td>
+            <td>(There appears to be no actual inscription. The above is part of the description.)</td>
+            <td>Step on (once-off)</td>
+            <td>Breaks, releasing a chaos monster, that depends on PP.:
+            <p>chaos rat (PP &lt; 40);</p>
+            <p>chaos plague bearer (PP &gt; 40);</p>
+            <p>chaos spawn (PP &gt; 80);</p>
+            <p>chaos knight (PP &gt; 160);</p>
+            <p>writhing mass of primal chaos (PP &gt; 320);</p>
+            <p>balor (PP &gt; 640). Also drains all PP.</p></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. The statue seems to depict a troll, unlike any you have seen. Tall and lean, it almost looks like a giant elf. Covered in heavy armor from head to toe, gigantic sword in one hand and massive shield in the other. You imagine he must have been the very symbol of invulnerability in life.</td>
+            <td>An inscription at the bottom reads: "R.I.P. Jalmag, the troll warrior, grand master smith, felled by the Lich King."</td>
+            <td>Step on (once-off)</td>
+            <td>Chance to fix rusty or broken equipped item</td>
+            <td>"You hear a voice in your head: "YE'LL NIID HELP! 'ERE! BASH DEM GUD!"</td>
+            <td>Kicking, stepping on, nor praying with high elven archer seems to doing nothing. Stepping on with dark elven beastfighter resulted in voice.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is an obsidian statue of a wine bottle, faintly glowing from within.</td>
+            <td>An inscription at the bottom reads: "Em ebibmi! (it's "imbibe me" backwards)"</td>
+            <td>Kick</td>
+            <td>Generates <a href="#potion_of_gain_attributes">potion of gain attributes</a> or <a href="#potion_of_cure_corruption">potion of cure corruption</a>; destroys the statue</td>
+            <td>"The statue crumbles to dust! Suddenly an item is lying on the ground."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Acheatarus, Demigod of the Unspoiled</td>
+            <td>An inscription at the bottom reads: "It is better to have loved and lost than to never have loved"</td>
+            <td>Step on (once-off)</td>
+            <td>Summons a tame monster</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It has no head. Its outstretched arms still bear the weathered symbols of some long-forgotten noble's hall.</td>
+            <td>An inscription at the bottom reads: "No more can any man achieve than this."</td>
+            <td>Kick</td>
+            <td>Destroys the statue</td>
+            <td>"The statue crumbles to dust!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is the skillful carved cat from a dark wood. Black eyes of the statue seem to glow a bit of light.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Kick</td>
+            <td>Drops 2 white gems (Gemology needed to find out what they are)</td>
+            <td>"The eyes of the statue drops to the flor."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is too worn to be sure, but it resembles some ancient swordsman, standing at attention.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Kick</td>
+            <td>Generates a mithril long sword</td>
+            <td>"The statue crumbles to dust! Suddenly an item is lying on the ground."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Soirana, troll bard while in the midst of deadly singing accompanied with bone breaking clubbing.</td>
+            <td>An inscription at the bottom reads: "Eto po lubvi"</td>
+            <td>Pray on</td>
+            <td>Generates a gem</td>
+            <td><br></td>
+            <td>Inscription refers to a song by Russian band
+        <a href="http://en.wikipedia.org/wiki/Mumiy_Troll">Mumiy Troll</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Shod of silver, it resembles a proud and haughty looking human, who bears the symbols of a mindcrafter.</td>
+            <td>An inscription at the bottom reads: "Only those who can keep their thoughts focused in one place dare approach."</td>
+            <td>Step on</td>
+            <td>Unknown</td>
+            <td>You hear a voice in your head: "Welcome student, I have much to teach you...". The statue crumbles to dust!
+            <p><br> or</p>
+            <p>"Don't waste my time!"</p></td>
+            <td>Has one of two possible effects; if the player doesn't meet a certain requirement (Orcish beastfighter got it w/o any intrinsics except poison) they are (randomly) teleported; if they do meet it learning is trained (?) (The human barbarian I encountered the statue with experienced an increase to learning just a hundred or two turns later.) Possibly Le dependant (Orc beastfighter was eligible at Le:7)</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a small iron figurine of a cowled gnome. Unremarkable in appearance yet seems to be posed in a way to suggest he is hiding something from view.</td>
+            <td>An inscription at the bottom reads: ""I'm the jinx, so what?""</td>
+            <td>Kick</td>
+            <td>curses</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A jumble of stone and metal loops intertwine into a wondrous figure. While seeming chaotic, the eye is quickly drawn to follow the curves, building a pattern as you continue to gaze at it. A tear leaks from the corner of your eye. No art has ever moved you this way, you cannot move for fear of losing this moment.</td>
+            <td>An inscription at the bottom reads: "Understanding eternity takes time."</td>
+            <td>Step on (once-off)</td>
+            <td>Briefly paralyzes, restores PP</td>
+            <td>"You are flooded with power!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It's a rather creepy statue. A female form in alabaster, dressed in a all-encompassing habit, praying. The palms are pointed towards her though, trying to cover her eyes. Her eyes are carved ivory and in each corner is a tiny sapphire - as if she were weeping.</td>
+            <td>An inscription at the bottom reads: "Don't blink. Blink and you're dead. Don't turn around and don't blink."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>Refers to the <a href="http://tardis.wikia.com/wiki/Weeping_Angel">Weeping Angels</a> from the TV Show Doctor Who. The inscription is a quote from the Doctor regarding these entities.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A solitary siren sits atop a pile of bones.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>1.2.0pre23, crashed the game when steping on it. Caused a Crash in 1.2.0. Seems fixed in Release 60.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a beautiful emerald statue of a miniscule, grinning magical figure with glistening amethysts for eyes. It seems to brim with magical energies.</td>
+            <td>An inscription at the bottom reads: "A rare, elusive 'leprechaun', that hails from a beautiful realm far far away"</td>
+            <td>Kick</td>
+            <td>Grants teleportitis to the PC</td>
+            <td>None</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Colored a deep blue, its shape seems to change while you look upon it.</td>
+            <td>An inscription at the bottom reads: "Take Each Random Little Opportunity, Boldly."</td>
+            <td>Kick</td>
+            <td>if boots are on - bless them, else damages slightly</td>
+            <td>"Your feet feel relaxed" / "Your feet hurt."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a winged unicorn made of pure white marble.</td>
+            <td>An inscription at the bottom reads: "Blessings I give to all my faithful students."</td>
+            <td>Pray</td>
+            <td>Blesses all spellbooks in backpack</td>
+            <td><br></td>
+            <td>Reference to the character Princess Celestia in My Little Pony: Friendship is Magic.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A cat-sized dragon with an impish grin and carved of near-translucent crystal lies at ankle level.</td>
+            <td>An inscription at the bottom reads: "To Glitterwing, true companion, fearless hunter, and reckless troublemaker."</td>
+            <td>Kick</td>
+            <td>Fairy dragon appears</td>
+            <td><br></td>
+            <td>Status (hostile/non-hostile/tamed) of apearing monster depends on charisma score. Apparently with 9 charisma it apears non-hostile but becomes hostile when action taken.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It's a winged unicorn with stars in its mane.</td>
+            <td>An inscription at the bottom reads: "Huzzah!"</td>
+            <td>Pray on</td>
+            <td>Grants the see invisible intrinsic</td>
+            <td>"You are blessed by the goddess of the night!"</td>
+            <td>My little pony reference to princess Luna, from the episode, "Luna eclipsed". <a href="https://www.youtube.com/watch?v=A9QE7LRjF54">https://www.youtube.com/watch?v=A9QE7LRjF54</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts a small, tubby man, carved from a dark wood. He is smiling widely and carries a small cask under his right arm.</td>
+            <td>An inscription at the bottom reads: "I share freely"</td>
+            <td>Kick</td>
+            <td>A murky liquid spills from the cask making you drunk</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It has the shape of a large-bodied man; with short arms and stubby legs. A round head is topped with a thin streak of hair like the fin of a fish.</td>
+            <td>An inscription at the bottom reads: "VISCERA"</td>
+            <td>Kick</td>
+            <td>Dooms</td>
+            <td><br></td>
+            <td>Likely a reference to <a href="http://en.wikipedia.org/wiki/Nelson_Frazier,_Jr.">Nelson Frazier, Jr</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It oddly resembles the shape of a boot.</td>
+            <td>An inscription at the bottom reads: "For every action, there is an equal and opposite reaction"</td>
+            <td>Kick</td>
+            <td>Knocked back one square</td>
+            <td>The statue kicks you back. You tumble along the floor after being hit by some strong force!</td>
+            <td>Reference to <a href="http://en.wikipedia.org/wiki/Newton%27s_laws_of_motion#Newton.27s_3rd_Law">Newton's 3rd Law</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. This appears to be a statue of a <a href="/wiki/Ratling_warrior" title="Ratling warrior">ratling warrior</a> of exquisite craftsmanship - you can make out the tiniest wrinkles on the creature's skin, the tiniest dents on its scales and armor. The figure is standing on one knee, cowering under a shield and stretching an arm as if attempting to strike an imaginary foe. There is a mixture of horror, desperation and anger on the ratling's face.</td>
+            <td>An inscription at the bottom reads: "Do not touch."</td>
+            <td>Pray</td>
+            <td>Curses, destroys the statue</td>
+            <td>"*FOOLISH MORTAL! I'M NOT HERE TO BRING BACK TO LIFE YOUR PETRIFIED RATLING FRIENDS* The statue crumbles to dust!"</td>
+            <td>Effect occurs whether you are a ratling or not.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. You are shocked to discover it's a statue of you. The lifeless stone eyes seem to meet your stare. The effect is quite disturbing.</td>
+            <td>An inscription at the bottom reads: "Erected in memory of a brave adventurer, Rest In Peace."</td>
+            <td>Step on</td>
+            <td>Dooms PC</td>
+            <td>You feel as if your final days are upon you!</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. it resembles a winged lion with the head of a human woman. it seems to be carved from solid granite and has a sculpted book before it.</td>
+            <td>An inscription at the bottom reads: "Knowledge is another form of power"</td>
+            <td>Pray</td>
+            <td> +1 Learning</td>
+            <td>You feel knowledgable [sic].</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a mere meter tall, and depicts a vaguely humanoid creature with large eyes, tentacles and eyestalks.</td>
+            <td>An inscription at the bottom reads: "Alien's corner of quiet and guilt."</td>
+            <td>Step on (once-off)</td>
+            <td>Mutes the PC.
+            <p>[temporary - same as harpy corpse?]</p></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be of a large jackal carved out of jet black obsidian with sparkling rubies for eyes.</td>
+            <td>An inscription at the bottom reads: "I guard the veil against any who would violate it."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts a weasel with two heads. Each eye is made from different kind of gemstone.</td>
+            <td>An inscription at the bottom reads: "Ancient Weasel of Eldritch Knowledge."</td>
+            <td>Pray on</td>
+            <td> +2 Learning, -1 Charisma</td>
+            <td>"You absorb eldritch knowledge and are altered by it!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a middle-aged man wearing a wizard's robe. Curiously, he is holding a shield in each hand. The shield wielded in his right hand is silver with a circular motive. His other shield is almost perfectly black. You can feel experience and power radiating from the statue.</td>
+            <td>An inscription at the bottom reads: "Drauf Momo Olepisk, a sorceror from a land quite nearby."</td>
+            <td>Pray on</td>
+            <td>?</td>
+            <td><i>No message</i></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts an elf with a look of horror frozen on her face.</td>
+            <td>An inscription at the bottom reads: "Not all petrification goes bone-deep."</td>
+            <td>Kick</td>
+            <td>Summons a hostile writhing mass of primal chaos.</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles an ancient white rabbit, hewn from gold smelling faintly of frankincense.</td>
+            <td>An inscription at the bottom reads: "Cas Go Par!"</td>
+            <td>Kick</td>
+            <td>Unknown</td>
+            <td>"&lt;name of PC's deity&gt; mumbles "Myrrh..." "</td>
+            <td>The references to gold, frankincense and myrrh could be a reference to the gifts of the three Kings / Wise Men at the nativity of Jesus</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Small and shaped like an elegant cat, stretching, it is made of crumbly white alabaster with pink ruby eyes that seem to sparkle as if lit by a ray of sunlight.</td>
+            <td>An inscription at the bottom reads: "Willow, a gentle creature, she loved the light and we loved her"</td>
+            <td>(Doesn't respond to kicking, prayer or stepping on. Maybe zapping a wand of light?)</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Carved from a block of silver leaf jasper, it depicts a lightly built, short-haired cat with friendly slanting eyes and dark points.</td>
+            <td>An inscription at the bottom reads: "Requiesce cat in pace Darion"</td>
+            <td>Step on</td>
+            <td>Removes curse</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be of a robed figure, holding a tome.</td>
+            <td>An inscription at the bottom reads: "Argyll, the compiler of odd tales"</td>
+            <td>Reading</td>
+            <td>Generates a book(?)</td>
+            <td><br></td>
+            <td>Character was bard with 21 Le and 100 literacy. Generated book was teleportation.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A band of cocky trolls, petrified by their encounter with reality, still appearing to smugly surveying.. their surroundings with upturned noses and blind eyes.</td>
+            <td>An inscription at the bottom reads: "In memorandum of things best forgotten"</td>
+            <td>Step on (once-off)</td>
+            <td>Decreases stats; changes of -1 Str, -1 Le and -1 Wi were observed</td>
+            <td>"Your morale drops"</td>
+            <td>Seems to be a reference to <a href="http://en.wikipedia.org/wiki/Troll_%28Internet%29">Internet trolls</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. The mottled black and red eudialyte stone has been polished and sculpted into the shape of a giant, humanoid heart.</td>
+            <td>An inscription at the bottom reads: "I want to hear your screams!"</td>
+            <td>Step on (once-off)</td>
+            <td>Decreases alignment to CN (N- to CN and NL to CN observed); alters stats: +1 Le, +3 Wi, +4 Dx, -1 To, -2 Ch, -3 Ap, +2 Pe</td>
+            <td>"Your eyes blacken momentarily as the statues darkness infuses you. You feel changed."</td>
+            <td>First editor observed changes of +1 Le, +? Wi, +? Dx, -1 To, -5 Ch, -? Ap, +2 Pe; this editor saw the above stats (tested repeatedly with save file), which match except for Ch.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. An ashy blackness pulses over the statue's surface, giving it an appearance of gaseous immateriality.</td>
+            <td>An inscription at the bottom reads: "There's no smoke without fire!"</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. The dark statue of a tall, athletic man lies ahead of you. A mischievous smile is frozen on his face, and bright green eyes seem to be fixing you with their gaze.</td>
+            <td>An inscription at the bottom reads: "I do what I try what I am"</td>
+            <td>Step on (once-off)</td>
+            <td>-5 Str, -5 Tou, drops the <a href="#amulet_of_petrification_resistance">amulet of petrification resistance</a></td>
+            <td>"As you get close to the statue you feel weak, and your vision blurs slightly. As you slump to the ground, tired and dizzy, you see the color of the statue going from dark to fair, coming to life in front of your eyes. The man whispers his thanks in an insidious voice, and disappears."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Apart from the two rubies it has for eyes, it is made of pure black onyx, absorbing any light that touches it. Its eyes remind you of someone from ancient times, someone whose face you remember seeing in old tomes... a scholar or wizard, perhaps?</td>
+            <td>An inscription at the bottom reads: "Teach and be taught!"</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is of a thinly built man huddled as if to squeeze through a narrow gap. He leads with a stone crossbow, held at arm's length.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a fierce dwarf ranger cunningly depicted out of a massive block of granite.</td>
+            <td>An inscription at the bottom reads: "ye'll need more than that to hurt me!"</td>
+            <td>Kick</td>
+            <td>Does ~88 points of damage without killing the PC (reducing it to minimum 1 HP) and increases Toughness by 1</td>
+            <td><br></td>
+            <td>1 PC was reduced to 1 HP, another from 202/202 to 114/202. Both didn't die, and got 1 To.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It seems to be a wooden carving of a kobold holding a baby human</td>
+            <td>An inscription at the bottom reads: "To Mkita, for not eating my baby"</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts a heavily armored dwarf playing dice against a gnome, who's just lost his armor on the game.</td>
+            <td>An inscription at the bottom reads: "The luck is the greatest armor of all."</td>
+            <td>Pray on</td>
+            <td>Unknown</td>
+            <td>None</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A kobold carved of pure alabaster takes a defensive stance, tightly clutching a spear. Despite being wounded, the small creature's face remains brave and determined.</td>
+            <td>An inscription at the bottom reads: "Small But Fierce"</td>
+            <td>Kick</td>
+            <td>Injures the PC; no other noted effects
+            <p>[v1.2 removes part of current Health, adds to max PowerPoints. Not know if its permanent of temporary effect]</p></td>
+            <td>"You feel weak and overpowered."</td>
+            <td>A reference to the <a href="http://www.koboldquarterly.com/">Kobold Quarterly</a> magazine, now out of print.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A giant cat is poised as if to pounce, carved from white marble with inlaid stripes of tiger's eye across its back and tail. Its eyes are blue sapphires and glow faintly!</td>
+            <td>An inscription at the bottom reads: "Sharaleo"</td>
+            <td>Pray on</td>
+            <td>Grants see invisible intrinsic</td>
+            <td>"Your eyes tingle."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. This is the statue of a tall human magician, clothed in a long tunic. A decided expression is on his face, and a beautifully-sculpted flame raises from his extended hand.</td>
+            <td>An inscription at the bottom reads: "Ubun, the fire elementalist. Igne nature renovatur integra."</td>
+            <td>Pray</td>
+            <td>Triggers a fireball/explosion on the statue's square</td>
+            <td>"A huge fireball explodes!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is covered with dense foliage but you see a gleam of sapphire underneath.</td>
+            <td>An inscription at the bottom reads: "Twig the Lurker!"</td>
+            <td>Kick</td>
+            <td>Gem is put where you were standing (Sapphire or random?)</td>
+            <td>"The foliage rustles. Suddenly an item is lying on the ground."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It's a dwarf raising his ale mug up high!</td>
+            <td>An inscription at the bottom reads: "Beware the consequences!"</td>
+            <td>Step on (once-off)</td>
+            <td>Confuses for couple turns</td>
+            <td>"Your head hurts!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a young boy with chestnut brown hair cropped in a bowl cut.</td>
+            <td>An inscription at the bottom reads: "Yllib LLa Reve!"</td>
+            <td>Kick</td>
+            <td>Generates a wild cat</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts a slight human with unruly hair and skewed glasses that seems to be staring intently at some arcane chalky scribbles on a nearby wall.</td>
+            <td>An inscription at the bottom reads: "The rule of thumb!"</td>
+            <td>Step on (once-off)</td>
+            <td>PC gains marks for all weapon skills (including missile weapons and shields)</td>
+            <td>"You gain some surprising insights into your combat abilities."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. An exquisitely detailed marble sculpture. It is a perfect likeness of you!</td>
+            <td>An inscription at the bottom reads: "No adventurer will ever match this peerless original."</td>
+            <td>Step on (once-off)</td>
+            <td>Summons a hostile doppelganger</td>
+            <td>"Suddenly a copy of yourself appears."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a very old and ugly-looking man. His eyes seem to glow a tiny bit and figure itself feels like alive when caught by a peripheral vision. The long dead body of an adventurer is nearby.</td>
+            <td>An inscription at the bottom reads: "Koschei (might be obfuscated to hide the relation to the Koschei the Immortal)"</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It seems to resemble some variety of terrifying quadrupedal beast. Intricately crafted from granite, razor-sharp hooked claws and needle-like teeth catch your eye.</td>
+            <td>An inscription at the bottom reads: "Beware! A great and perilous beast hast been entrapped within."</td>
+            <td>Kick</td>
+            <td>Summons a hostile wild cat/td>
+            <td>"A hostile wild cat appears."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It looks like a man wearing immaculate clothes. You feel as if he disapproves of your beggard look. It seems to look right into your soul. You feel as if it knows all your deepest secrets and desires. Better than you do.</td>
+            <td>An inscription at the bottom reads: "You rang, Milord? (Milady if female)"</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a happy gnome that enjoys the flow of the nature forgetting the violent ways of the wilderness.</td>
+            <td>An inscription at the bottom reads: "Respect the things greater than the races of Ancardia."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a small brown bear, crafted from rough hewn wood.</td>
+            <td>An inscription at the bottom reads: "Clifton, the bear"</td>
+            <td>Pray on</td>
+            <td>If doomed summons ~6 hostile grizzly bears, else summons a tame brown bear</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts a young barefoot amazon clad in wolf pelts about to ready an arrow onto her longbow. Her long locks of hair and delicate features are so gracious and lifelike you are immediately struck by her beauty.</td>
+            <td>&lt;no inscription&gt;</td>
+            <td>Kick</td>
+            <td>Puts PC in sleep for about 20 turns and the statue disappears. Restores full HP and PP.</td>
+            <td>Suddenly the statue shudders and appears to shake itself back to life!
+            <p>The long locks of hair turn jet black and flow about as she shakes her head fighting the drowsiness of an age old sleep. Her head then turns from side to side looking for prey. As she spots you she quickly readies an arrow! For a second you feel a strange sense of fascination as her eyes look deep into your eyes. Before you can react the magical arrow hits you in the chest! Waves of magic pour over you. You feel drowsy. You smile before helplessly falling into a deep sleep.</p></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is very smooth and completely dark, when you touch it you feel a small carved impression of a boot.</td>
+            <td>An inscription at the bottom reads: "Feel the power in your feet"</td>
+            <td>Kick</td>
+            <td>Grants the see invisible intrinsic</td>
+            <td>"Your eyes tingle"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It seems to be a male minotaur dressed in leather and female orc in plate mail holding hands.</td>
+            <td>An inscription at the bottom reads: "Mutabull, Minotaur Druid, and Hafwenharu, Orc Paladin"</td>
+            <td>Pray on</td>
+            <td>Removes unnatural age; the prayer will also be heard by the PC's god in this case</td>
+            <td>"You are reminded of a love from your youth."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It portrays a tall man, his face alight with wonderment, his eyes lost in the contemplation of knowledge that transcends the mundane world of commoners.
+             <p>Two wide brims jut from the sides of his hat, mystic signs cover his robe: straight and winding strokes cross and split, arrows and arcane formulae embellish them. His right hand holds a strange lightning, forked into two quarrels at each end; from his left hand dangles a tiny lock cracked open.</p></td>
+            <td>An inscription at the bottom reads: "Phi Ricardus Nnam, human archmage, melder of lights and ambers, 918--988"</td>
+            <td>Step on</td>
+            <td>Increases Learning (at least 1-4 points)</td>
+            <td>"You feel enlightened!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It seems very thankful.</td>
+            <td>An inscription at the bottom reads: "Welcome back"</td>
+            <td>Step on (once-off)</td>
+            <td>Generates a mithril weapon of the most skilled type</td>
+            <td>"Welcome back to our lands. You are instrumental to our future. We could not have done it without you." The statue crumbles to dust! Suddenly an item is lying on the ground.</td>
+            <td>Effect was observed with a level 16 gnomish barbarian who was fighting with his heir gift (brutal two-handed sword), and a mithril two-handed sword (+6, 3d5+6) [-1,+0] was generated in this case. A level 11 hurthling barbarian wielding an adamantium scimitar received a cursed balanced mithril broadsword (+7, 1d7+5). A lvl13 DE Wizard wielding Skullcrusher received uncursed mithril dagger (+0, 1d4+5). A beastfighter (most skilled in unarmed combat) received a piece of mithril ore. Level 8 orcish barbarian wielding adamantium short sword got (+1, 1d8+4) mithril spear because polearm weapons training was at level 5, and swords only at level 2.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It's a strange humanoid creature with fourteen outstretched arms. They almost look as wings of a skeletal angel. # of the hands are clenched into fists. [# equals to the number of scrolls the statue was given previously.]</td>
+            <td>An inscription at the bottom reads: "Scroll of literacy check recall center."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is the crumbling remains of a humanoid warrior mounted on a small horse. It has been carved from brittle sandstone.</td>
+            <td>An inscription at the bottom reads: "... ... Friendship ... ... ... ...</td>
+            <td>Step on (once-off)</td>
+            <td>Statue breaks, temporarily boosts Charisma by a small amount</td>
+            <td>"You feel friendly."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Cheerful maiden in a dynamic pose of a dancer, cast from pure gold, her back straight, arms held tight to her body. As you adjust your sight, you notice that light flickering ghastly on statue's fair features makes an illusion of rapid legs' movement.</td>
+            <td>An inscription at the bottom reads: "Queen Thea Maris, The Butterfly Dancing with the Morning Star"</td>
+            <td>Pray</td>
+            <td>Speed boost</td>
+            <td>"You quicken!"</td>
+            <td>(similar to the potion of the boost speed)</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is in the shape of a huge, golden horseshoe.</td>
+            <td>An inscription at the bottom reads: "Luckyshoe"</td>
+            <td>Step on (once-off)</td>
+            <td>Adds Lucky intrinsic</td>
+            <td>"You feel lucky."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A foppish-looking human is carved into the marble. His grin is somehow infuriating.</td>
+            <td>An inscription at the bottom reads: "LATE TO BED AND EARLY TO RISE GIVES A HERO SAGGY EYES"</td>
+            <td>Kick</td>
+            <td>Generates several (3-4 observed) <a href="#scroll_of_amnesia">scrolls of amnesia</a></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Of a wizard who looks as if he was about to cast a spell.</td>
+            <td>An inscription at the bottom reads: "Call upon me when it seems magic may be the only remaining answer."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It represents an old trollish figure wearing shamanic clothes.</td>
+            <td>An inscription at the bottom reads: "No'Grok, healer of the Keg'Sham tribe, but also a fervent follower of Vagrak."</td>
+            <td>Pray</td>
+            <td>"You feel both healed and corrupted. You feel corrupted."</td>
+            <td>Corrupts enough to add one corruption</td>
+            <td>PC was a level 4 grey elven wizard. Apparently also causes damage, since he died immediately afterwards. Cause of death was "broke his leg while kicking at the air."</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles two entangled snakes in the act of swallowing each other tail, shaped like a lemniscate.</td>
+            <td>An inscription at the bottom reads: "The only way life can stay alive is to devour other life. Nothing is sacred."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a gnome carved from a clear blue stone.</td>
+            <td>An inscription on the bottom reads: "In honor of Twidgie - emissary to the trolls and cryomancer of legend."</td>
+            <td>Kick</td>
+            <td>Get some castings of Frost Bolt.</td>
+            <td>"You feel cold."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A statue of an immensely corrupted drakeling appears to be staring at something.</td>
+            <td>An inscription on the bottom reads: "You cannot outrun your destiny."</td>
+            <td>Step on (once-off)</td>
+            <td>Temporarily boosts speed</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a crystal phoenix, filled with magma and
+            <p>glowing a violent red.</p></td>
+            <td>An inscription at the bottom reads: "HS, AR/SLDR, TBAB, C"</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Crafted from marble it depicts a human in strange garb - one hand bearing a flame and the other an orb.</td>
+            <td>An inscription at the bottom reads: "Sven T Sexgore: Mad Genius &amp; Part-Time Deity"</td>
+            <td>Pray</td>
+            <td>Grants fire resistance intrinsic</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. This crudely-chiseled statue seems to have been carved by the very dwarf it was meant to depict... after he had a few too many dwarven ales. Either he had serious genetic problems or he wasn't a very good sculptor.</td>
+            <td>An inscription at the bottom reads: "Orris, dwarven monk"</td>
+            <td>Kick</td>
+            <td>Confuses, makes drunk, reduses healing rate slightly</td>
+            <td>"You suddenly feel more powerful and quite dizzy. Also, your foot hurts. You can think clearly again."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It has a look of a raven on the pedestal of pure black onyx. An old tome is lying under the claws.</td>
+            <td>An inscription at the bottom reads: "Those who follow the path of Elendar may be enlightened."</td>
+            <td>Pray on</td>
+            <td>Dooms, PC is randomly teleported away from statue</td>
+            <td>"You are suddenly lost. Suddenly you stand somewhere else. You hear raven's caw from a distance. You feel very bad about it."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Made from a single slab of black ivory, it represents a large rodent. A marmot, or perhaps a groundhog. Hard to say, since it's been subject to extensive weathering. The animal seems to be wearing some sort of spectacles, and holds in its paw a device that resembles a sundial.</td>
+            <td>An inscription at the bottom reads: "So the eve of tomorrow is the eve of today..."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>More than likely a reference to the rabbit from Alice in Wonderland</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a huge egg, hewn from polished granite.</td>
+            <td>An inscription at the bottom reads: "Only a fool would try to break me."</td>
+            <td>Kick</td>
+            <td>Damages the PC by half of current HP; grants -1 Strength</td>
+            <td>One-time message: "The statue does not budge."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts a dark-hooded creature. You cannot discern its race or class. Beneath the flaps of the cloak you catch a glimpse of something shiny, metallic.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Kick</td>
+            <td>Teaches Backstabbing to the PC. If it is topped, teaches Stealth (or random skill?). Dooms
+        lawful PC.</td>
+            <td>"You feel more skillful."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A gleaming obsidian statue depicts a crowd of horsemen on top of a hill, with a crowd of goblins cowering around them.</td>
+            <td>An inscription at the bottom reads: "Never forget the Conquest."</td>
+            <td>Pray</td>
+            <td>No visible effect</td>
+            <td>The sound of hooves trampling the ground rushes into your mind... and fades out with the sound of goblins gnashing her teeth.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It looks like a goat.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Stepping on statue</td>
+            <td>Increases strength (?);
+            <p>Blesses character</p></td>
+            <td>"You feel supported."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a hurthling archer, apparently eating some sort of cake.</td>
+            <td>An inscription at the bottom reads: "Omno mune zur!"</td>
+            <td>Pray</td>
+            <td>Increases satiation (~ 1500)</td>
+            <td>"You feel slightly more satiated."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A magnificent obsidian statue of a large cat sitting on top of a chest, one paw extended.</td>
+            <td>An inscription at the bottom reads: "Ilmaleipuri, the hungry one"</td>
+            <td>Pray on</td>
+            <td>Grants fate smiles intrinsic; the prayer will also be heard by the PC's deity</td>
+            <td>"The statue seems to smile at you for a second. You smile back."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a beautiful person with long hairs, statue is made from light pure marble without any marks of aging. It makes you wonder about the legendary princess of Ancardia.</td>
+            <td>An inscription at the bottom reads: "Those who meet my fallen knight will know the strength of the toughest love."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. it resembles a fawn, somehow always staring at you, almost as if its turning its head when you look away. Initially the statue appears to be made of wood but upon closer inspection you realize it is marble, masterfully carved to look so.</td>
+            <td>An inscription at the bottom reads: "From dust we are created and to dust we shall return."</td>
+            <td>Step on (once-off)</td>
+            <td> -1 St; possibly dooms; other effects, possibly item destruction?</td>
+            <td>You feel weaker. Some dust drizzles from your backpack! You feel very bad. A voice booms: "FROM DUST WE ARE CREATED AND TO DUST WE SHALL RETURN"</td>
+            <td>The effect may sometimes be just a strength loss, without the other effects or message text past "You feel weaker."; the actual effects triggered may depend on certain factors that are not yet known.
+            <p>Sometimes there are no effects whatsoever, and there are no messages generated as well.</p></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. The statue depicts an old drakeling carrying a tome in one hand and a polearm in the other.</td>
+            <td>An inscription at the bottom reads: "Herald of Lore"</td>
+            <td>Cast a spell</td>
+            <td>Destroys statue and summons a giant rat in its place, which carries a spellbook of whatever spell was cast.</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is an ice sculpture of a leopard with sapphire eyes. The ice glows from within, there is something trapped inside.</td>
+            <td>An inscription at the bottom reads: "Snow falls gently as silence reigns in a moonlit glade and pines bend to winter"</td>
+            <td>Kick</td>
+            <td>Generates two <a href="#ring_of_ice">rings of ice</a></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts small figures, possibly dwarves or gnomes, boarding a strange-looking ship inside a large cave. The statue is made from rough stone. It seems to be unfinished</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Pray on</td>
+            <td>Unknown</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A peculiarly formless statue.
+            <p>or A nondescript statue.</p></td>
+            <td>An inscription at the bottom reads: "THE UNKNOWN GOD"</td>
+            <td>Pray on</td>
+            <td>Unknown</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Wrought in hardwoods, its intricate detail evokes a druid with lightning bursting from the fingertips.</td>
+            <td>An inscription at the bottom reads: "At last, we meet again..."</td>
+            <td>(K)ick the statue</td>
+            <td>A hostile druid appears</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It looks like a combination of dragon, human, and octopus with tentacles hanging from its head. It reminds you of some ancient god, sleeping at the bottom of the ocean...</td>
+            <td>An inscription at the
+            <p>bottom reads: "Kneel before me when the stars are right and I shall conquer the worlds!".</p></td>
+            <td>Pray on</td>
+            <td>Hostile least daemon appears</td>
+            <td><br></td>
+            <td>Reference of Cthulhu, a fictional deity created by writer H. P. Lovecraft and first introduced in the short story "The Call of Cthulhu", published in the pulp magazine Weird Tales in 1928.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a tiny statue of a raven, which you might have missed amidst the rubble had you not been looking closely.</td>
+            <td>An inscription at the bottom reads: "The secret to vast riches is to save every penny".</td>
+            <td>Step on (once-off)</td>
+            <td>Generates one gold piece</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A statue that defies description, beyond simply a column of power, rising hundreds of feet into the air.</td>
+            <td>An inscription at the bottom reads: "Adventurer beware".</td>
+            <td>Step on (once-off)</td>
+            <td>Reduces HP to 1 and restores PP to full</td>
+            <td>"You feel full of power and very weak at the same time."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It seems to flicker in and out of existence. The few glimpses you manage to catch of it seem to radiate in all the colors of the rainbow.</td>
+            <td>An inscription at the bottom reads: "Seeing is believing".</td>
+            <td>Step on (repeatable)</td>
+            <td>Grants the see invisible intrinsic</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A stone reproduction of a water fountain stands before you.</td>
+            <td>An inscription on the bottom reads: "Behold water immemorial, adventurer: not frozen but held in time.".</td>
+            <td>Step on (once-off)</td>
+            <td>Paralyzes the PC for about 15 turns</td>
+            <td>"Suddenly you feel as if were frozen in time!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a crude humanoid figure, clutching a sword in one hand and a strange, angular goblet in the other.</td>
+            <td>An inscription at the bottom reads: "An Adventurer is You!".</td>
+            <td>Pray on</td>
+            <td>Generates a <a href="#potion_of_booze">potion of booze</a></td>
+            <td><br></td>
+            <td>This is the logo and tagline of browser-based RPG <a href="http://www.kingdomofloathing.com/">Kingdom of Loathing</a>, in which booze is an important item.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Brushing away the dust of ages you reveal the terrifying visage of an Ancient Chaos Wyrm. A shudder passes through your body as a whisper enters your mind "fear me mortal, for I am your doom".</td>
+            <td><br></td>
+            <td>Kick</td>
+            <td>Corruption</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles an infinitely complex crystalline structure which glows with a strange light.</td>
+            <td>An inscription at the bottom reads "gatataatccataccattatcat".</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>The inscription is a gene sequence.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a vaguely elven female figure, formed from dark granite. A strange, wavering symbol is etched into the figure's chest.</td>
+            <td>An inscription at the bottom reads: "i' alkar en' Lol'th".</td>
+            <td>Step on (once-off)</td>
+            <td>Summons a >dark elven priestess.</td>
+            <td><br></td>
+            <td>Priestess was companion for Troll Chaos Knight and chaotic Dark elf Necromancer.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Carved out of black rock, it appears to be a vile zombie with fearsome plated armor seemingly bolted and nailed into the its.. decaying flesh. Curiously, the statue seems to radiate heat.</td>
+            <td>An inscription at the bottom reads: "Zombos, Lord of the Undead"</td>
+            <td>Kick</td>
+            <td>Triggers a fireball / explosion at the statue's location.</td>
+            <td><br></td>
+            <td>Zombos also appears as a boss monster</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a gnomish hero.</td>
+            <td>An inscription at the bottom reads: "Fus Roh Dah".</td>
+            <td>Pray on</td>
+            <td>Fire resistance</td>
+            <td>"You cool down."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a wiry, spotted feral cat, made from sandstone and black granite. Its emerald eyes seem to stare at you!</td>
+            <td><br></td>
+            <td>Step on (once-off)</td>
+            <td>Temporarily boosts speed</td>
+            <td>"You quicken!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be of a tall human of ambiguous gender, its long fangs the only clues that it is in fact a vampire. There is what looks like long dried blood on the fangs and looking into its eyes you feel a strange desire to add some of your own to the stains.</td>
+            <td>An inscription at the bottom reads: "feed me and I shall help you to feed from others."</td>
+            <td>Step on (once-off)</td>
+            <td>Permanently reduces max HP by 20; a <a href="#wmod">murderous</a> adamantium broadsword of <a href="#wmod">vampirism</a> is generated on the square</td>
+            <td>"You feel some icy force feeding on you!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts a large man with a goatee and a stern expression. Wherever you move his eyes seem to follow. His clothing is very ordinary save for a fuzzy hat which seems out of character. In his hands is a very sophisticated and powerful crossbow with the name "Vera" etched in the stock. The statue appears to be made of incredibly strong ceramic.</td>
+            <td>An inscription at the bottom reads "Jayne Cobb".</td>
+            <td>Pray on</td>
+            <td>Generates gold pieces, 5258, 6602, 7357, 8322, 9000 and 9904 observed.</td>
+            <td><br></td>
+            <td>Jayne Cobb is a character in the show Firefly. One of his weapons is named "Vera".</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a ferocious-looking Orc, carved from jade. It wields a greataxe with a bloodthirsty grin.</td>
+            <td>An inscription at the bottom reads: "The Warlord's Fury".</td>
+            <td>Pray on (once-off)</td>
+            <td>Summons 2-4 hostile orcs (when prayed with lawful orc ranger, one tame orc was summoned)</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is of a rather ugly human in an unusual pose. Its face, which is turned to look behind it, is twisted in fear. A large, lumpy sack is clutched in its right hand.</td>
+            <td>An inscription at the bottom reads: "Such is the fate of those who would steal from Solia the Wizard."</td>
+            <td>Cast spell (once-off)</td>
+            <td>Generates items</td>
+            <td>"Absorbing some of the magic from your spell, the statue comes to life. "Mercy!" The thief hurriedly empties his bag and scurries away.
+            <p>Suddenly some items are lying on the ground."</p></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Oddly enough, this marble statue seems to resemble you.</td>
+            <td>An inscription at the bottom reads: "Fragile".</td>
+            <td>Kick</td>
+            <td>Reduces Appearance by 1, damages as if you kick yourself</td>
+            <td>"The kick breaks off a piece of the statue's nose and a jagged crack runs across the statue's face. A few seconds later your own head rocks back from an invisible blow that breaks your nose."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is made of aged and splintering wood, the details too faded to make out. It appears to be holding a wand.</td>
+            <td>An inscription at the bottom reads: "Mage's Folly".</td>
+            <td>Cast a spell?
+            <p>(Light was cast once)</p></td>
+            <td>Confuses, possibly other effects too.</td>
+            <td>"You feel as if you have blundered"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts a spear wielding nomad, its hair painted blue.</td>
+            <td>An inscription at the bottom reads: "Saito Wanderer Doomwarder".</td>
+            <td>Cast a spell</td>
+            <td>Blinds the PC?</td>
+            <td>"You think you smell sweet ferns."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is an ancient, cracked statue of an emaciated man, bent with age.</td>
+            <td>An inscription at the bottom reads: "I will show you fear in a handful of dust."</td>
+            <td>Kick</td>
+            <td>Ages the PC by 10 years</td>
+            <td>"You feel older."</td>
+            <td>10 years has been observed for a ratling and a dark elf.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It's of a winged humanoid with upraised hands, made of polished marble.</td>
+            <td>An inscription at the bottom reads: "Reach the sky."</td>
+            <td>Step on (once-off)</td>
+            <td>Speed+3.
+            <p>Also temporarily boosts speed hugely [200 extra points were recorded]</p></td>
+            <td>"You feel as if the sky has become somewhat closer!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. An elf and an orc kissing, hewn from granite.</td>
+            <td>An inscription at the bottom reads: "John and Stephanie forever".</td>
+            <td>Step on (once-off)</td>
+            <td> +1 Mana</td>
+            <td>"You feel more powerful."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a squatting dragon in hewn slate with its tail coiled around the base of the statue.</td>
+            <td>An inscription at the bottom reads: "Claws of dragons - humans' blood streaming - unseen sparkling...".</td>
+            <td>Pray on</td>
+            <td>Mutes (permanently?)</td>
+            <td>"You suddenly can't speak any more."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts a &lt;PC's race&gt; &lt;PC's class&gt;.</td>
+            <td>An inscription at the bottom reads: "&lt;PC's name&gt;".</td>
+            <td>Kick</td>
+            <td>Deals damage to the PC</td>
+            <td>"You hurt yourself."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It's a rough barbarian in thick furs. He's clutching a mirror with both hands.</td>
+            <td>An inscription at the bottom reads: "The way home"</td>
+            <td>Kick</td>
+            <td>Unknown</td>
+            <td>None</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles some type of oil lamp.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Kick</td>
+            <td>Grants a wish, or summons a hostile djinni.</td>
+            <td>"You have been granted a wish." or "A hostile djinni appears."</td>
+            <td>Sadly can only be kicked once.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a medium sized man in a bowler hat, vest, and bow tie.</td>
+            <td>An inscription at the bottom reads: "Nobody No-one was here."</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>A reference to Doctor Who audio stories? <a href="http://tardis.wikia.com/wiki/Nobody_No-One">http://tardis.wikia.com/wiki/Nobody_No-One</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a large <a href="#3.4">si</a>.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Pray on</td>
+            <td>Increases random attribute by 10 <b>permanently</b></td>
+            <td>"You feel trained."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is shaped like an angel with her wings spread, sculpted in white marble.</td>
+            <td>An inscription at the bottom reads: "Rest, ye righteous."</td>
+            <td>Step on (once-off)</td>
+            <td>One off full healing for non-chaotics.</td>
+            <td>"You feel great."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a sculpture of a hungry-looking wizard.</td>
+            <td>An inscription at the bottom reads: "Here lies Hoagie the Cave Wizard, entombed by hunger for all eternity.".</td>
+            <td>Step on (once-off)</td>
+            <td>Either hugely boosts the PC's satiation, or increases it straight to Bloated (variable amount)</td>
+            <td>"You feel bloated!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles the trout jumping out of the river.</td>
+            <td>An inscription on the bottom reads: "Thanks for all the fish"</td>
+            <td>Pray</td>
+            <td>?</td>
+            <td>"The statue laughs at you"</td>
+            <td>A reference to the <a href="http://en.wikipedia.org/wiki/So_Long,_and_Thanks_for_All_the_Fish">Douglas Adams books</a></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Two great legs of stone and a fallen, frowning head are all that remains of the once proud sculpture.</td>
+            <td>An inscription at the bottom reads: "Look on my works, ye mighty, and despair!".</td>
+            <td>Kick</td>
+            <td>Temporarily blinds the PC (~6 turns)</td>
+            <td>"You hear a distant scream of rage, echoing across the centuries. Suddenly a hot gust of desert wind blows sand past you, stinging your eyes. You are blinded!"</td>
+            <td>Reference to the poem "Ozymandias" by Shelley.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts a life-size ratling in gray stone. All of its facial features appear to have been chiseled off and sanded over.</td>
+            <td>An inscription at the bottom reads: "Know me not, and I will not know you."</td>
+            <td>Pray</td>
+            <td>dooms the PC if Dexterity &lt; ~50, else advances stealth, grants +2 Dexterity and temporary invisibility</td>
+            <td>"For a moment, you feel something looking at you... and eyes you with contempt as it notices you / but its gaze seems to pass over you."</td>
+            <td>The statue always depicts a ratling, regardless of the PC's race.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be of a grizzled Gnollish Warrior.</td>
+            <td>An inscription at the bottom reads: "Dogbreath, a mighty warrior of the hidden fortress at Deegi'eff".</td>
+            <td>Kick</td>
+            <td> +1 St, -1 Le, +1 To, -1 Ma</td>
+            <td>"You feel different."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a seated figure of a full bellied man holding a cornucopia brimming with fruits and vegetables.</td>
+            <td>An inscription at the bottom reads: "A good harvest".</td>
+            <td>Step on (once-off)</td>
+            <td>Improves vegetation rate?</td>
+            <td>"For a moment your thumb seems to turn green!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is carved from marble in the form of a teenage human boy.</td>
+            <td>An inscription at the bottom reads: "In loving memory of Nicholas, sadly yours was a life lived all too quickly.".</td>
+            <td>Pray on</td>
+            <td>Permanently increases speed (~5 points?)</td>
+            <td>"You speed up."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a stunningly beautiful valkyrie warrior atop a noble horse, crafted from shimmering white marble.</td>
+            <td>An incription at the bottom reads: "Courage is a beacon of light in the darkest of places.".</td>
+            <td>Step on (once-off)</td>
+            <td>Grants a large boost to satiation</td>
+            <td>"You feel less ravenous."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a kobold shaman, but the features are more human than dog-like. It seems to be made of obsidian streaked with marble.</td>
+            <td>&lt;no inscription&gt;</td>
+            <td>Unknown</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is crafted from some gray stone and is in the form of a huge creature you have never seen, but heard about in legends told by travelers; supposedly it roams in the far south. It has big ears, a snake-like nose, and horns protrude from its mouth. Was it your imagination or did the ground just tremble?</td>
+            <td>An inscription at the bottom reads: "Gray as a mouse / Big as a house...".</td>
+            <td>Kick</td>
+            <td>Triggers an earthquake</td>
+            <td>"The whole level suddenly is hit by a violent earthquake!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Squidgold, Hurthling Merchant.</td>
+            <td>An inscription at the bottom reads: "Who swindled the rich and poor for profit".</td>
+            <td>Kick</td>
+            <td>Generates gold about 3500gp or teaches/adds points to gemology or teaches/adds points to haggling</td>
+            <td>You feel price conscious.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>"You stumble upon a statue. It depicts a menacing orc, ready for battle."</td>
+            <td>&lt;no inscription&gt;</td>
+            <td>Kick</td>
+            <td>Generates a <a href="#scroll_of_defense">scroll of defense</a></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a stylized bird of prey, wings spread wide. It appears to have been carved from the darkest obsidian in a distant age. Its body rises from an enormous oval geode, split in twain. The entire statue slowly pulses with a ruddy glow. Sensing no obvious threat, you return to scanning your surroundings for danger. However, you have the strange feeling of being watched by the statue's slit like sapphire eyes.</td>
+            <td>An inscription at the bottom reads: "The dark corners of the heart are
+            <p>the true gateways of cHaOs...".</p></td>
+            <td>Cast a spell</td>
+            <td>Grants temporary invisibility and corrupts</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It looms above your head, and seems to be depicting a huge dog. Upon closer inspection, you recognize it as a wolf figure carved from dark stone. Its back is up and its teeth are bared, as it scowls its defiance towards some invisible foe above it.</td>
+            <td>An inscription at the bottom reads: "Ithras. Great Wolf of Misecs Caan".</td>
+            <td>Step on (once-off)</td>
+            <td>A tame wolf appears. (For lawful only&nbsp;?)</td>
+            <td>"A tame wolf appears."</td>
+            <td>Editor stepped on this statue with a Lawful High Elven Wizard female PC - no wolf appeared. There was a hostile monster in the room at the time and PC was intrinsically invisible.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It depicts a reckless, slightly crazy bearded man in a red jacket and a beautiful goddess in a pointed hat and a dark cloak with faint stars. They hold each other's hands.</td>
+            <td>An inscription at the bottom reads: "Always will be.".</td>
+            <td>Pray on.</td>
+            <td>Damages all undead in the room by ~10HP; removes sickness and poison; restores full HP</td>
+            <td>"Your condition improves a lot."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a tall statue of interconnected loops, spirals, and shapes. It is hard to take it in all at once, and you need to avert your gaze after staring at it for a moment.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Unknown.</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is made from clay and depicts a human warrior. Strangely, as you examine the face, you see that the mouth is missing.</td>
+            <td><br></td>
+            <td>Pray on.</td>
+            <td>Mutes PC - permanently?</td>
+            <td>"You suddenly can't speak any more."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles an herb bush with many different blossoms.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Unknown.</td>
+            <td>Unknown.</td>
+            <td>Unknown.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a small, impish looking man and appears to be immaculately cut from green jade.</td>
+            <td>An inscription at the bottom reads: "Look behind you!".</td>
+            <td>Step on (once-off)</td>
+            <td>Summons a hostile Invisible stalker or Pixie</td>
+            <td>"You feel watched from behind." - when summoning an invisible stalker</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A giant humanoid has been sculpted from pure silver, bearing a great sword in one hand and a giant shield in the other. Its face, ornamented with emerald eyes, bears an enigmatic expression. Three pairs of translucent blue wings extend magnificently from its back, embracing it protectively with pulsating magical energy. At twenty feet tall, it towers over you.</td>
+            <td>An inscription at the bottom reads: "Guardian Maion - Crafted by JZB.".</td>
+            <td>Step on (once-off)</td>
+            <td>Grants fate smiles intrinsic.</td>
+            <td>You feel protected!</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a large eye squinted in anger, carved roughly from a single massive piece of stone. At first glance it appears to be painted black however upon closer inspection it's clearly covered in dark sticky blood.</td>
+            <td>An inscription at the bottom reads: "Mah Le Go Ah Ray".</td>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a tall, lean man, wearing a wide-brimmed hat, with circular gems that glow orange over where his eyes should be ... and fangs.</td>
+            <td>An inscription at the bottom reads: "Given to the Organization in memory of incomprehensible adventurers."</td>
+            <td>Step on (once-off)</td>
+            <td>Creates darkness in a nine-square area around the statue</td>
+            <td>Suddenly you are engulfed in darkness!</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is of a handsome grifter carved from pure gypsum.</td>
+            <td>An inscription at the bottom reads: "Sir Maghan, who slew the terror of the mines long before Sir Zizik ever did.".</td>
+            <td>Kick</td>
+            <td>Generates 3 figurines of wondrous power and 3 uncursed potions of Charisma</td>
+            <td>Some items are lying on the ground</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a very large figure of a robed humanoid. It seems to have been carved out from the same stone as the walls around you, but also looks newer and much better preserved than the walls. The dungeon is too dark for you to see its upper part clearly, but it looks like it is pointing to the south-west.</td>
+            <td>An inscription at the bottom reads: "Taz, the Wise".</td>
+            <td>Step on; player receives a prompt "Do you want to climb the statue? [y/N]"</td>
+            <td>Chance to reach the top (for <a href="#thin_and_nimble">thin and nimble</a> or <a href="#very_light">very light</a> only&nbsp;?) and get <a href="#potion_of_willpower">potion of willpower</a>.
+            <p>Or else the statue topples and breaks, adamantium medium shield is lying on the ground.</p></td>
+            <td>You start climbing the statue. You are halfway up the statue and hanging from its outstretched arm when you realize its base is not mortared to the ground. The statue topples to the ground! Suddenly some items are lying on the ground.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a kangaroo cut from a rough, red stone.</td>
+            <td>An inscription at the bottom reads: "If I do this wrong, I'll kick myself.".</td>
+            <td>Kick</td>
+            <td>Moves the player one square away from the statue</td>
+            <td>"The statue kicks you back. You tumble along the floor after being hit by some strong force!" or "The statue kicks you back. You crash into an obstacle!" if wall or monster is in the way.</td>
+            <td>Works even when overburdened.</td>
+        </tr>
+        <tr>
+            <td>It is a crudely hewn figure of a man, tall and emaciated. The face is featureless and unpolished. You feel uneasy, as though you were looking upon something that isn't meant to be seen.</td>
+            <td>The inscription on the plinth has been chiseled out and is unreadable.</td>
+            <td>Kick</td>
+            <td>A random undead appears.</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to have been worn by the passage of time but you make out the remnants of an ancient dwarven hero.</td>
+            <td>An inscription at the bottom reads: "The unholy fled before his mighty sword."</td>
+            <td>Kick</td>
+            <td>Generates a(n iron) long sword — which may have <a href="#wmod">modifier</a> — and 0-4 undead monsters (skeletons, zombies and mummies have been observed).</td>
+            <td>"The force of your blow knocks the sword from the statue's hand. Suddenly an item is lying on the ground."</td>
+            <td>One character generated a long sword of the sun and 1-3 minor undead.
+            <p>DE WS generated an ashen long sword of slaughtering and 4 lesser undead</p>
+            <p>Gnome Monk generated normal long sword, no undead.</p>
+            <p>GE Monk generated C ashen long sword and 3 undead</p>
+            <p>Gnomish paladin: normal long sword, no undead.</p>
+            <p>LN Orcish Beastfighter: long sword of the sun, 1 zombie.</p></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Its black stone is looped into eerie, uncanny twists and whorls. You're sure you saw it move out of the corner of your eye.</td>
+            <td>An inscription at the bottom reads: "Mother of Chaos".</td>
+            <td>Kick</td>
+            <td>Generates at least one writhing mass of primal chaos</a> (up to three have been observed)</td>
+            <td>"You notice &lt;x&gt; enem&lt;y/ies&gt; appearing."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It comprises an imposing, ogre-like humanoid in a pose of belly-shaking mirth. The statue appears carved of red sandstone, perhaps from a far land. Within its lifelike visage, two moonstone eyes of piercing blue gaze sightlessly down and through you.</td>
+            <td>An inscription at the bottom reads: "Scourge of the far north: the Reebeast.".</td>
+            <td>kick</td>
+            <td>A blue gem pops out and appears at your feet.</td>
+            <td>"One of the gleaming eyes is knocked loose. Suddenly an item is lying on the ground."</td>
+            <td>Blue gem was a Sapphire could be a random blue gem though only 3 occurrences thus far.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. You gaze in awe on a beautiful woman carved from shining white marble.</td>
+            <td>An inscription at the bottom reads: "Queen Margot".</td>
+            <td>Pray</td>
+            <td>?</td>
+            <td>"Energy ripples through your body."</td>
+            <td>?</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is clearly ancient. What race or gender is represented by the miserable form in front of you it is impossible to tell. The centuries have slowly taken their toll and it is a mass of cracks; it looks like a single kick would reduce it to dust.</td>
+            <td><br></td>
+            <td>Kick</td>
+            <td>Grants -1 Appearance</td>
+            <td>None</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. The grotesque statue is made of both gold and ebony. You are not sure of its shape, it seems to bend and distort as you stare at it.</td>
+            <td>An inscription at the bottom reads "Change comes from within".</td>
+            <td>Pray</td>
+            <td>Removes Doomed</td>
+            <td>"You feel that a sinister curse is lifted from you."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is crudely carved from rock and looks vaguely like a warrior. It is covered in symbols of battle painted in blood.</td>
+            <td>No inscription.</td>
+            <td>Kick</td>
+            <td>Grants +1 Strength</td>
+            <td>None</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles an anvil, albeit a rather tiny one.</td>
+            <td>An inscription at the bottom reads: "In loving memory of Conrad Konrad, the greatest weaponsmith of his time".</td>
+            <td>Kick</td>
+            <td>Curses all but eternium ingots in PC's backpack</td>
+            <td>None</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a small statue which represents a blue dwarf-like creature with white pants and a white hat.</td>
+            <td>An inscription at the bottom reads: " "In honor of the most feared smurf of them all, MonsterSmurf!!" ".</td>
+            <td>Unknown</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a frost giant jarl, crudely hewn from a large piece of basalt.</td>
+            <td>An inscription at the bottom reads: "Narflung, Master of Flame".</td>
+            <td>Pray</td>
+            <td>Deals ice damage; reduses healing rate slightly</td>
+            <td>You feel very cold. You are engulfed by the piercing ice needles!</td>
+            <td>Can kill low hp PCs, dealt (always?) 26 damage.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. Only after a while, you spot the stony body of a petite, headless female in an entanglement of uncountable, interwoven arms holding all kinds of weaponry.</td>
+            <td>No inscription</td>
+            <td>Kick</td>
+            <td>Unknown</td>
+            <td>No message displayed (repeatable)</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. 16 smooth stone spheres are arranged in a complex and irrational pattern.</td>
+            <td>No inscription</td>
+            <td>Cast a spell</td>
+            <td>Statue destroying, the room is filled with local monsters.</td>
+            <td>Statue crumbles to dust</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. A perfectly formed, smooth statue of a frog prince, complete with crown. It looks rather boring.</td>
+            <td>No inscription</td>
+            <td>Kick</td>
+            <td> +1 Charisma</td>
+            <td>You feel friendly.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a multi-colored metal figure of a donkey. It is festive looking.</td>
+            <td>An inscription at the bottom reads: "Property of Senko De Mieyo".</td>
+            <td>Kick</td>
+            <td>Generates 3-5 bits of gnomish candy</td>
+            <td>Suddenly some items are lying on the ground.</td>
+            <td>Seems to refer to <a href="http://en.wikipedia.org/wiki/Cinco_de_Mayo">Cinco de Mayo</a>, celebrations of which may include <a href="http://en.wikipedia.org/wiki/Pi%C3%B1ata">piñatas</a>.</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It is a statue of an ancient warrior, covered in ice despite the weather.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Zap a wand</td>
+            <td>Transforms zapped wand into <a href="#wands">Wand of Cold</a>. Doesn't always work.</td>
+            <td>The &lt;wand&gt; suddenly is covered with frost!</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles an archer aiming at some distant target. He seems to be using a wand instead of an arrow.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Zap a wand</td>
+            <td>Drops a wand of far slaying</td>
+            <td>Suddenly an item is lying on the ground.</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be an ancient karmic dragon encrusted with thousands of tiny opals.</td>
+            <td>An inscription at the bottom reads: "draco dormiens nunquam titillandus".</td>
+            <td>Use a wand</td>
+            <td>Summons a hostile karmic dragon or generates his corpse or generates ~5500 gold; destroys statue</td>
+            <td>"A hostile karmic dragon appears."</td>
+            <td>The inscription is the Hogwarts motto from Harry Potter, and translates to "Never tickle a sleeping dragon".</td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a strangely peacefull gnoll, proudly standing and holding out a large gem. Tiny sparks of light seems to surround it.</td>
+            <td>An inscription at the bottom reads: "Arga the Artificier"</td>
+            <td>Step on (once-off)</td>
+            <td>Statue disappears and generates a gem. (In my test, a worthless piece of green glass)</td>
+            <td>"You reach for the gem. The statue crumbles to dust! Suddenly an item is lying on the ground."</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. This twisted figure smirks in delight at your odd predicament, gazing down at your petty works. looking back a second time, you imagine the statue has shifted into an unflattering mimic of you.</td>
+            <td>An inscription at the bottom reads: "Your power shall be greater!"</td>
+            <td>Cast a spell</td>
+            <td>The room receives "The air in this room seems to be magically charged." effect</td>
+            <td>"You feel the mana of the world flow through you!"</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It looks like a lay priest and feels soapy to the touch.</td>
+            <td>&lt;No inscription&gt;</td>
+            <td>Step on (once off)</td>
+            <td>Makes a copy of random item in your backpack (?)</td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It resembles a beautiful woman, naked from the waist up, beckoning to you with a wink. You feel drawn to it...</td>
+            <td>An inscription at the bottom reads: "Love is a tricky thing.".</td>
+            <td>Step on (once off)</td>
+            <td>Confusion and HP restoration</td>
+            <td>"You feel warmed by a wave of love... and confused" <i>or</i> <br>
+            <p>"You feel irritated." </p></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>You stumble upon a statue. It appears to be a hurthling eating from a plate full of food.</td>
+            <td>An inscription at the bottom reads: "Time for second breakfast!".</td>
+            <td>Step on (once-off)</td>
+            <td>Satiates</td>
+            <td>"You feel satiated."</td>
+            <td><br></td>
+        </tr>
+</tbody>
+</table>
+
 
 
     <h1>Single-file Improved Adom Guidebook</h1>
@@ -30481,7 +32732,7 @@ Updated September 9th, 2007
 </td></tr><tr><td>luck                     </td><td>lead           </td><td>8s  </td><td>+Luck                                                    </td><td>iron
 </td></tr><tr><td>order                    </td><td>marble         </td><td>3s  </td><td>draws alignment towards L+; damages chaotics 1d3         </td><td>adamantium
 </td></tr><tr><td>perseverance {Wi+3}      </td><td>electrum       </td><td>3s  </td><td>+3 Wi (+/-3)                                             </td><td>iron
-</td></tr><tr><td>petrification resistance </td><td>opal           </td><td>3s  </td><td>-Petr                                                    </td><td>stone
+</td></tr><tr><td><a name="amulet_of_petrification_resistance">petrification resistance</a> </td><td>opal           </td><td>3s  </td><td>-Petr                                                    </td><td>stone
 </td></tr><tr><td>protection +2            </td><td>silver         </td><td>3s  </td><td>+2 PV (+/-3)                                             </td><td>mithril
 </td></tr><tr><td>protection from constructs</td><td>onyx          </td><td>3s  </td><td>protects vs special attacks of constructs [6]            </td><td>stone
 </td></tr><tr><td>protection from undead   </td><td>bone           </td><td>3s  </td><td>protects vs special attacks of undead [3][6]             </td><td>wood
@@ -30886,7 +33137,7 @@ bonuses when throwing shields.</p><p>
 </td></tr><tr><td>fire                             </td><td>adamantium </td><td>protects worn equipment and pack from cold attacks          </td><td>adamantium
 </td></tr><tr><td>fire resistance                  </td><td>wooden     </td><td>-Fire                                                       </td><td>wood
 </td></tr><tr><td>gain attribute                   </td><td>ruby       </td><td>+ n to any attribute, +1 is base value                      </td><td>gold
-</td></tr><tr><td>ice                              </td><td>mithril    </td><td>protects worn equipment and pack from fire attacks          </td><td>mithril
+</td></tr><tr><td><a name="ring_of_ice">ice</a>                              </td><td>mithril    </td><td>protects worn equipment and pack from fire attacks          </td><td>mithril
 </td></tr><tr><td>invisibility                     </td><td>jade       </td><td>+Invi                                                       </td><td>stone
 </td></tr><tr><td>karmic absorption                </td><td>scratched  </td><td>allows melee of karmics without penalty; B/U/C status declines with each melee attack </td><td>gold
 </td></tr><tr><td>luck                             </td><td>copper     </td><td>+Luck                                                       </td><td>gold
@@ -30900,7 +33151,7 @@ bonuses when throwing shields.</p><p>
 </td></tr><tr><td>stun resistance                  </td><td>electrum   </td><td>-Stun                                                       </td><td>iron
 </td></tr><tr><td>teleport control                 </td><td>glowing    </td><td>+TCtr                                                       </td><td>gold
 </td></tr><tr><td>the clear mind                   </td><td>fire opal  </td><td>-Conf                                                       </td><td>iron
-</td></tr><tr><td>the fish                         </td><td>vibrating  </td><td>AUTOCURSING; rustproof; [1]                                 </td><td>iron
+</td></tr><tr><td><a name="ring_of_the_fish">the fish</a>                         </td><td>vibrating  </td><td>AUTOCURSING; rustproof; [1]                                 </td><td>iron
 </td></tr><tr><td class="bad">weakness             </td><td>plain      </td><td>AUTOCURSING; decreases Strength to 2/4/6 C/U/B; [2]         </td><td>iron
 </td></tr><tr><td>wedding ring                     </td><td>nograin    </td><td>grants near IMMUNITY to the Banshee's wail when wielded for males - see section <a href="#2.17">2.17</a>; [3]</td><td>various
 </td></tr></tbody></table><p>
@@ -32902,7 +35153,9 @@ Updated August 22nd, 2010
 <h3>Appendix D - Wands - complete list</h3>
 <hr size="2"><p>
 
-</p><table>
+</p>
+<a name="wands"></a>
+<table>
 <caption>Wands <tt>\</tt></caption>
 <tbody><tr><th>Name                  </th><th>UnID'd name</th><th>Made of</th><th>Weight </th><th>Spell          </th><th>Range [1]</th><th>Notes
 </th></tr><tr><td>acid                  </td><td>wooden</td><td>wood        </td><td>4s     </td><td>Acid Bolt      </td><td>16/8/6</td><td>&nbsp;
@@ -33038,7 +35291,7 @@ see also <a href="#0.6.2.2">0.6.2.2</a>
 </td><td>+Wi (temporary)
 </td><td>&nbsp;
 
-</td></tr><tr><td>booze </td><td>black
+</td></tr><tr><td><a name="potion_of_booze">booze</a> </td><td>black
 </td><td>4s
 </td><td>drunks (temporary) [2]
 </td><td>recharges wands 2d2/1d3/1d2 B/U/C; Yggaz trades random potions for potions of booze
@@ -33054,12 +35307,12 @@ given enough potions of carrot juice; always "orange potion"
 </td><td>+Ch
 </td><td>&nbsp;
 
-</td></tr><tr><td>confusion </td><td>green
+</td></tr><tr><td><a name="potion_of_confusion">confusion</a></td><td>green
 </td><td>2s
 </td><td>confuses (temporary); blessed cures confusion
 </td><td>confuses monsters when thrown
 
-</td></tr><tr><td>cure corruption </td><td>mottled
+</td></tr><tr><td><a name="potion_of_cure_corruption">cure corruption</a> </td><td>mottled
 </td><td>2s
 </td><td>removes corruptions 50d30/50d10/-50d5 B/U/C (about 0.75 corruptions if blessed); see <a href="#0.10.3.1">0.10.3.1</a>
 </td><td>damages 24d24+24/16d16+16/8d8+8 B/U/C creatures that corrupt by touch when thrown (ignores PV); quest object for Gaab'Baay
@@ -33095,7 +35348,7 @@ no uniques, exchange if 1d(Dx)-1 + 1dlvl-1 + 10 &gt; MonsterLevel
 </td><td>restores HP (max 333 HP if blessed), cures sickness (100% chance only if blessed)
 </td><td>blessed potion will permanently increase max HP 1-2 points when drunk
 
-</td></tr><tr><td>gain attributes </td><td>glowing
+</td></tr><tr><td><a name="potion_of_gain_attributes">gain attributes</a> </td><td>glowing
 </td><td>4s
 </td><td>+1 to one (uncursed) or all (blessed) attributes
 </td><td>&nbsp;
@@ -33105,7 +35358,7 @@ no uniques, exchange if 1d(Dx)-1 + 1dlvl-1 + 10 &gt; MonsterLevel
 </td><td>restores a few HP, cures sickness (100% chance only if blessed)
 </td><td>blessed potion has a ~35% chance to permanently increase max HP by 1 when drunk
 
-</td></tr><tr><td>insight </td><td>magenta
+</td></tr><tr><td><a name="potion_of_insight">insight</a></td><td>magenta
 </td><td>2s
 </td><td>reveals your intrinsic resistances and regeneration rates
 </td><td>&nbsp;
@@ -33257,7 +35510,7 @@ see <a href="#0.14.4">0.14.4</a>
 </td><td>uncursed clears scrolls and rusts iron; dip items in holy water to bless them [3],
 unholy water to curse them; always "watery potion"
 
-</td></tr><tr><td>willpower </td><td>pink
+</td></tr><tr><td><a name="potion_of_willpower">willpower</a> </td><td>pink
 </td><td>4s
 </td><td>+Wi
 </td><td>&nbsp;
@@ -33405,7 +35658,7 @@ would destroy it, the next entry in the list is used instead (see <a href="#0.5.
 </th><th>Effect when read
 </th><th>Remarks
 
-</th></tr><tr><td class="bad">amnesia
+</th></tr><tr><td class="bad"><a name="scroll_of_amnesia">amnesia</a>
 </td><td>ECNETOPINMO
 </td><td>omnipotence
 </td><td>PC forgets some parts of maps and identified items; cursed forgets ALL map and item knowledge
@@ -33465,7 +35718,7 @@ would destroy it, the next entry in the list is used instead (see <a href="#0.5.
 </td><td>darkens area around PC; the area can be lit again
 </td><td>&nbsp;
 
-</td></tr><tr><td>defense
+</td></tr><tr><td><a name="scroll_of_defense">defense</a>
 </td><td>HITME
 </td><td>hit me
 </td><td>improves an items DV (fails more often with better items)
